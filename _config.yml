@@ -3,4 +3,4 @@ description: A brief description of your site
 baseurl: ""  # Base URL for the site, set if your site is not hosted at the root of your domain
 url: "https://shankhya.github.io"  # Your site's URL, replace <username> with your GitHub username
 
-theme: jekyll-theme-minimal 
+theme: jekyll-theme-Architect
