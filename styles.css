@@ -3,6 +3,10 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: blue;
+  background-image: url('1677946312624 (1).jpg'); /* Replace 'background.jpg' with your image file name */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
@@ -26,16 +30,3 @@ footer {
   width: 100%;
 }
 
-/* styles.css */
-body {
-  background-color: blue; /* Set the background color to blue */
-  /* You can also use specific shades of blue like #007bff for a brighter blue */
-}
-
-/* styles.css */
-body {
-  background-image: url('1677946312624 (1).jpg'); /* Replace 'background.jpg' with your image file name */
-  background-repeat: no-repeat;
-  background-size: cover; /* Adjust the background size as needed (cover, contain, etc.) */
-  /* You can also add other background properties like background-position, background-attachment, etc., as needed */
-}
