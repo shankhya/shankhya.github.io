@@ -1,32 +1,37 @@
-/* css/styles.css */
-body {
-  font-family: Arial, sans-serif;
+/* Reset some default styles */
+body, h1, h2, h3, p {
   margin: 0;
   padding: 0;
-  background-color: blue;
-  background-image: url('1677946312624 (1).jpg'); /* Replace 'background.jpg' with your image file name */
+}
+
+/* Set the background image for the body */
+body {
+  background-image: url('1677946312624 (1).jpg'); /* Adjust path if necessary */
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: Arial, sans-serif; /* Set your preferred font family */
 }
 
+/* Style the header */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+  background-color: #333; /* Dark background color for the header */
+  color: #fff; /* White text color for the header */
+  padding: 1rem;
   text-align: center;
 }
 
+/* Style the main content */
 main {
-  padding: 20px;
+  padding: 1rem;
 }
 
+/* Style the footer */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #333; /* Dark background color for the footer */
+  color: #fff; /* White text color for the footer */
+  padding: 1rem;
   text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position: fixed; /* Fixed position at the bottom of the page */
+  width: 100%; /* Full width */
+  bottom: 0; /* Place the footer at the bottom of the page */
 }
-
