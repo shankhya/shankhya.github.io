@@ -25,3 +25,9 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* styles.css */
+body {
+  background-color: blue; /* Set the background color to blue */
+  /* You can also use specific shades of blue like #007bff for a brighter blue */
+}
