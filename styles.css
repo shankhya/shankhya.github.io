@@ -31,3 +31,11 @@ body {
   background-color: blue; /* Set the background color to blue */
   /* You can also use specific shades of blue like #007bff for a brighter blue */
 }
+
+/* styles.css */
+body {
+  background-image: url('1677946312624 (1).jpg'); /* Replace 'background.jpg' with your image file name */
+  background-repeat: no-repeat;
+  background-size: cover; /* Adjust the background size as needed (cover, contain, etc.) */
+  /* You can also add other background properties like background-position, background-attachment, etc., as needed */
+}
