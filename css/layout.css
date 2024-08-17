@@ -58,4 +58,5 @@ body {
 .professional-activities-section {
     margin-top: 0; /* Remove any top margin from Professional Activities */
 }
+text-transform: capitalize;
 
