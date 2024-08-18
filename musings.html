@@ -121,7 +121,7 @@
 </div>
 
 			 <!-- Original content starts here -->
-        <h3><i class="fa fa-bell" aria-hidden="true"></i> <b>17.01.2024</b>: Plotting FOGRA39 dataset in CIELAB space</h3>
+        <h3><i class="fa fa-bell" aria-hidden="true"></i> <b>17.01.2024</b>: A simple image conversion pipeline</h3>
         <p style="text-align: justify;">
             
 	The color_conversion_pipeline repository offers a comprehensive Python-based solution for managing color conversions across various spaces. The workflow is structured into multiple steps, each handled by a distinct Python script, beginning with the extraction of RGB values and their conversion to CMYK. It involves transformations, including conversions from CMYK to Lab* using lookup tables, RGB to Lab* through both automated and manual methods, and subsequent conversions between Lab* and XYZ color spaces. Finally, color data in independent space are transformed to color-dependent color data using standard LUT (FOGRA39 characterization dataset) as well as colorimetrically. Color fidelity between original and reconstructed image is measured using Delta E values.
@@ -134,22 +134,22 @@
     </div>
 </div>
 <!-- First row for the first three images with captions -->
-<div class="row" style="padding: 2%;">
+<div class="row" style="padding: 2%; display: flex; align-items: center;">
     <div class="col-sm-4">
         <figure>
             <img src="musings/GCR Colorimetric.png" class="img-responsive img-rounded" alt="Image 1">
             <figcaption style="text-align: center;">Comparison of images before and after conversion obtained from mathematical L*a*b* to XYZ
-colorimetric &Delta;<sub>76</sub> = 18.16</figcaption>
+colorimetric &#916;<sub>76</sub> = 18.16</figcaption>
         </figure>
     </div>
     <div class="col-sm-4">
         <figure>
             <img src="musings/GCR LUT.png" class="img-responsive img-rounded" alt="Image 2">
-            <figcaption style="text-align: center;">Comparison of images before and after conversion obtained from L*a*b* to XYZ using LUT &Delta;<sub>76</sub> =
+            <figcaption style="text-align: center;">Comparison of images before and after conversion obtained from L*a*b* to XYZ using LUT &#916;<sub>76</sub> =
 77.81</figcaption>
         </figure>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" style="display: flex; align-items: center;">
         <figure>
             <img src="musings/No GCR.png" class="img-responsive img-rounded" alt="Image 3">
             <figcaption style="text-align: center;">Comparison of color difference between original RGB image and CMY images converted using colori-
@@ -163,7 +163,7 @@ metric and LUT based technique</figcaption>
     <div class="col-sm-6">
         <figure>
             <img src="musings/delta e colorimetric.png" class="img-responsive img-rounded" alt="Image 4">
-            <figcaption style="text-align: center;">omparison of color difference between colorimetric converted images for various black generation
+            <figcaption style="text-align: center;">Comparison of color difference between colorimetric converted images for various black generation
 techniques</figcaption>
         </figure>
     </div>
@@ -175,6 +175,7 @@ techniques</figcaption>
         </figure>
     </div>
 </div>
+
 
 		
 	</div>
