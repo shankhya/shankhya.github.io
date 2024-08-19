@@ -60,3 +60,24 @@ body {
 }
 text-transform: capitalize;
 
+.collapsible-content {
+    overflow: hidden;
+    max-height: 3.6em; /* Adjust this value for more or fewer lines */
+    transition: max-height 0.5s ease-out;
+    position: relative;
+}
+
+.collapsible-content.expanded {
+    max-height: 100%; /* Allows full content to be visible */
+}
+
+.see-more-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0;
+    text-decoration: underline;
+}
+
