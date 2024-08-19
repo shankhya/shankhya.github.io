@@ -19,6 +19,23 @@
   	<link rel="stylesheet" href="css/academicons-1.8.0/css/academicons.css">
 	<link rel="stylesheet" href="css/layout.css">
 
+	<head>
+    <!-- Other head elements -->
+    <script>
+        function toggleContent(button) {
+            var content = button.previousElementSibling.previousElementSibling; // The content div
+            if (content.classList.contains("expanded")) {
+                content.classList.remove("expanded");
+                button.textContent = "See more...";
+            } else {
+                content.classList.add("expanded");
+                button.textContent = "See less...";
+            }
+        }
+    </script>
+</head>
+
+
 </head>
 
 <body>
