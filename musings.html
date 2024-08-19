@@ -202,6 +202,21 @@ techniques</figcaption>
 </div>
 <button id="seeMoreBtn" onclick="toggleContent()">See more...</button>
 
+		    <script>
+function toggleContent() {
+    var content = document.getElementById("moreContent");
+    var btn = document.getElementById("seeMoreBtn");
+
+    if (content.style.display === "none") {
+        content.style.display = "block";
+        btn.innerHTML = "See less...";
+    } else {
+        content.style.display = "none";
+        btn.innerHTML = "See more...";
+    }
+}
+</script>
+
     </div>
 </div>		
 	</div>
