@@ -19,6 +19,89 @@
   	<link rel="stylesheet" href="css/academicons-1.8.0/css/academicons.css">
 	<link rel="stylesheet" href="css/layout.css">
 
+	<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCAeStJWaqULRMZvJfaBaK0m4lHdCkbg1I",
+    authDomain: "githubwebpage-49237.firebaseapp.com",
+    projectId: "githubwebpage-49237",
+    storageBucket: "githubwebpage-49237.appspot.com",
+    messagingSenderId: "327422243989",
+    appId: "1:327422243989:web:0f72dc063cfa25672c579c",
+    measurementId: "G-YYE0NDK4PD"
+  };
+
+  // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // Initialize Firebase Authentication and get a reference to the service
+    const auth = getAuth(app);
+
+    // Sign up function
+    function signUp() {
+      const email = prompt("Please enter your email");
+      const password = prompt("Please enter your password");
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          console.log("User signed up:", userCredential.user);
+        })
+        .catch((error) => {
+          console.error("Error signing up:", error);
+        });
+    }
+
+    // Sign in function
+    function signIn() {
+      const email = prompt("Please enter your email");
+      const password = prompt("Please enter your password");
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          console.log("User signed in:", userCredential.user);
+          document.getElementById('sign-out').style.display = 'block';
+          document.getElementById('sign-in').style.display = 'none';
+          document.getElementById('sign-up').style.display = 'none';
+        })
+        .catch((error) => {
+          console.error("Error signing in:", error);
+        });
+    }
+
+    // Sign out function
+    function signOutUser() {
+      signOut(auth).then(() => {
+        console.log("User signed out");
+        document.getElementById('sign-out').style.display = 'none';
+        document.getElementById('sign-in').style.display = 'block';
+        document.getElementById('sign-up').style.display = 'block';
+      }).catch((error) => {
+        console.error("Error signing out:", error);
+      });
+    }
+
+    // Listen for authentication state changes
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log("User is signed in:", user);
+        document.getElementById('sign-out').style.display = 'block';
+        document.getElementById('sign-in').style.display = 'none';
+        document.getElementById('sign-up').style.display = 'none';
+      } else {
+        console.log("No user is signed in");
+        document.getElementById('sign-out').style.display = 'none';
+        document.getElementById('sign-in').style.display = 'block';
+        document.getElementById('sign-up').style.display = 'block';
+      }
+    });
+</script>
+
 </head>
 
 <body>
@@ -97,6 +180,12 @@
 				</div>
 			</div>
 
+<!-- Add this inside your body tag where you want the authentication buttons to appear -->
+<div id="auth-container">
+    <button id="sign-in">Sign In</button>
+    <button id="sign-up">Sign Up</button>
+    <button id="sign-out" style="display:none;">Sign Out</button>
+</div>
 
 		 <div class="row">
 				<div class="col-sm-9 bio-section" style="background-color:white;padding:2%;">
