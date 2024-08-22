@@ -116,6 +116,48 @@
 				    I am deeply interested in the field of color science, colorimetry and color management. However, I am not a coder. I take help from the web and try to solve problems that I find interesting. This section contains some attempts to explore areas that I am fascinated about. Some of them are quite trivial, yet I think they may be of some use to others who share the same passion and interest.</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>22.08.2024</b>: Implementation of Minimum Color Difference Gamut Clipping</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					    This article deliberates an implementation of a Minimum Color Difference Gamut Clipping. An input image
+					has been considered (in sRGB space) for clipping to a target space (AdobeRGB space) based on least color
+					difference. A segment maxima GBD has been considered for obtaining the gamut of the colors of input image.
+					A function has been introduced that generates LAB points from the AdobeRGB color space using an ICC profile. 
+					These points are used to create a Gamut Boundary Descriptor (GBD) via a convex hull for the AdobeRGB space. 
+					The input image is then converted from sRGB to LAB color space, and each color in the image is checked against 
+					the AdobeRGB GBD. If a color falls outside the AdobeRGB gamut, it is clipped to the closest point on the boundary, 
+					ensuring the smallest possible color difference.</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/min_de_gm.py" target="_blank">Source code</a> |
+					    <a href="/musings/min_de_mapping.pdf" target="_blank">Mathematical background</a> |
+					    				    
+					
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/image_comparison.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Original image (left), mapped image (right)</figcaption>
+					        </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gamut_comparison.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Gamuts of original (left) and mapped image (right)</figcaption>
+					        </figure>
+					    </div>
+						<div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gamut_lc_comparison.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Comparison of the gamuts across a slice along the L-C plane</figcaption>
+					        </figure>
+					    </div>
+					</div>
+				</div>
+				<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>21.08.2024</b>: Gamut Boundary Descriptor</h3>
 				<div class="collapsible-content">
 					<p align="justify">
