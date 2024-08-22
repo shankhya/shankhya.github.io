@@ -116,6 +116,45 @@
 				    I am deeply interested in the field of color science, colorimetry and color management. However, I am not a coder. I take help from the web and try to solve problems that I find interesting. This section contains some attempts to explore areas that I am fascinated about. Some of them are quite trivial, yet I think they may be of some use to others who share the same passion and interest.</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>22.08.2024</b>: Implementation of hue preserving minimum color difference gamut clipping (HPMINDE)</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					    The Hue Preserving Minimum Color Difference (HPMINDE) process is a gamut mapping technique designed to map 
+					colors from one color space, while preserving the hue and minimizing 
+					perceptual color differences. An implementation has been presented that converts an image from sRGB to the CIELAB color space, 
+					known for its perceptual uniformity. The AdobeRGB gamut is defined by generating LAB points using an ICC profile, 
+					and a convex hull is constructed to represent the Gamut Boundary Descriptor (GBD). The HPMINDE algorithm then maps 
+					each color in the image to the closest point on the GBD, ensuring hue preservation and minimizing the weighted color 
+					difference, which includes differences in lightness, chroma, and hue angle. The resulting mapped image is compared to 
+					the original, showing that while the colors are adjusted to fit within the AdobeRGB gamut, the perceptual differences 
+					are minimized, and the hue is well-preserved. The method is effective but can be computationally intensive due to the 
+					point-by-point comparison required to maintain the hue and minimize color differences.
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/hpminde.py" target="_blank">Source code</a> |
+					    <a href="/musings/hpminde.pdf" target="_blank">Mathematical background</a> 
+					    				    
+					
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/hpmin_de_image_comparison_optimized.jpg" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Original image (left) and mapped image (right)</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gamut_lc_comparison_hpmin_de_optimized.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Gamut along the L-C plane of original (left) and mapped (right) images</figcaption>
+					        </figure>
+					    </div>
+					</div>
+				</div>
+				<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>22.08.2024</b>: Implementation of various gamut clipping algorithms</h3>
 				<div class="collapsible-content">
 					<p align="justify">
