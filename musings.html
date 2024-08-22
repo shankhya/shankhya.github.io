@@ -146,35 +146,33 @@
 				<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
 
 
-				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>21.08.2024</b>: Gamut Boundary Descriptor</h3>
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>22.08.2024</b>: Minimum Color Difference Gamut Clipping</h3>
 				<div class="collapsible-content">
 					<p align="justify">
-					    A comparison has been drawn between the gamuts obtained from GBD calculated using convex hull method 
-					and segment maxima method. SMGBD results is more smoother gamut surface.</p>
+					    An implementation of the Minimum Color Difference Gamut Clipping method, used for mapping colors from an input gamut (e.g., sRGB) to a target gamut (e.g., AdobeRGB) has been presented. A function is introduced that generates a representative sampling of the the AdobeRGB color space using the ICC profile. The resulting points is used to generate a Gamut Boundary Descriptor (GBD) for the AdobeRGB space. Out-of-gamut colors are mapped to the closest boundary point on the target gamut by minimizing the Euclidean distance in CIELAB space. Some shortcomings of the method include, reduced contrast, diminished colorfulness, and a loss of detail in the mapped images.</p>
 					<span class="course-links">
-					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/smgbd.py" target="_blank">Source code for SMBGD</a> |
-					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gbd_convex_hull.py" target="_blank">Source Code for convex hull GBD</a> |
-					    <a href="/musings/SMGBD.pdf" target="_blank">Mathematical background</a> 					    
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/min_de_gm.py" target="_blank">Source code for SMBGD</a> |
+					    <a href="/musings/min_de_mapping.pdf" target="_blank">Mathematical background</a> 					    
 					
 					</span>
 					<!-- Images related to this section -->
 					<div class="row" style="padding: 2%; display: flex; align-items: center;">
 					    <div class="col-sm-6">
 					        <figure>
-					            <img src="musings/sample.jpg" class="img-responsive img-rounded" alt="Image 4">
-					            <figcaption style="text-align: center;">Image under consideration</figcaption>
+					            <img src="musings/image_comparison.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Original image (left) and mapped image (right)</figcaption>
 					        </figure>
 					    </div>
 					    <div class="col-sm-6">
 					        <figure>
-					            <img src="musings/SMGBD%20with%20convex%20hull.png" class="img-responsive img-rounded" alt="Image 5">
-					            <figcaption style="text-align: center;">SMGBD with convex hull</figcaption>
+					            <img src="musings/gamut_comparison.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Comparison of gamut in LAB space</figcaption>
 					        </figure>
 					    </div>
 						<div class="col-sm-6">
 					        <figure>
-					            <img src="musings/output_plot.png" class="img-responsive img-rounded" alt="Image 5">
-					            <figcaption style="text-align: center;">GBD using convex hull</figcaption>
+					            <img src="musings/gamut_lc_comparison.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Comparison of gamut along a plane of constant hue in L-C space</figcaption>
 					        </figure>
 					    </div>
 					</div>
