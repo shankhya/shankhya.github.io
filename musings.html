@@ -119,8 +119,7 @@
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>22.08.2024</b>: Implementation of various gamut clipping algorithms</h3>
 				<div class="collapsible-content">
 					<p align="justify">
-					    This article deliberates an implementation of a Minimum Color Difference Gamut Clipping. An input image has been considered (in sRGB space) for clipping to a target space (AdobeRGB space) based on least color difference. A segment maxima GBD has been considered for obtaining the gamut of the colors of input image. A function has been introduced that generates LAB points from the AdobeRGB color space using an ICC profile. These points are used to create a Gamut Boundary Descriptor (GBD) via a convex hull for the AdobeRGB space. The input image is then converted from sRGB to LAB color space, and each color in the image is checked against the AdobeRGB GBD. If a color falls outside the AdobeRGB gamut, it is clipped to the closest point on the boundary, ensuring the smallest possible color difference.
-					</p>
+					    An implementation and analysis of three gamut clipping techniques: SCLIP (Spherical CLIP), CCLIP (Chroma CLIP), and LCLIP (Lightness CLIP) has been presented. Each method is designed to map out-of-gamut (OOG) colors into a target color space, specifically AdobeRGB, using different approaches to preserve certain aspects of the image's color quality. SCLIP preserves color balance by mapping colors towards a reference lightness, usually, which minimally alters color but maintains the overall look of the scene. CCLIP focuses on reducing chroma to bring colors within the target gamut, resulting in an image with lower saturation and more muted colors. LCLIP reduces the lightness of OOG colors, leading to darker tones and reduced brightness, particularly affecting the highlights and midtones.</p>
 					<span class="course-links">
 					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/sclip.py" target="_blank">Source code</a> |
 					    <a href="/musings/sclip.pdf" target="_blank">Mathematical background</a> 
@@ -138,7 +137,7 @@
 					    </div>
 					    <div class="col-sm-6">
 					        <figure>
-					            <img src="musings/gamut_comparison_all_clips.png" class="img-responsive img-rounded" alt="Image 4">
+					            <img src="musings/gamut_lc_comparison_all_clips.png" class="img-responsive img-rounded" alt="Image 4">
 					            <figcaption style="text-align: center;">Comparison of gamuts of mapped images against original</figcaption>
 					        </figure>
 					    </div>
