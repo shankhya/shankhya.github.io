@@ -1,10 +1,10 @@
-#SMGBD & convex hull
+#Compute GBD using segment maxima, enclose gamut surface using convex hull, triangulates to obtain the gamut volume in LAB units
+
 import numpy as np
 from skimage import io, color
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-
 
 def calculate_gbd_segment_maxima(image, m=16, n=16):
     # Convert the image to LAB color space
@@ -30,8 +30,7 @@ def calculate_gbd_segment_maxima(image, m=16, n=16):
 
     return gbd_matrix
 
-
-def plot_gbd_with_convex_hull(gbd_matrix):
+def plot_gbd_with_convex_hull_and_calculate_volume(gbd_matrix, output_path='gamut_boundary.png'):
     # Convert spherical coordinates back to LAB for plotting
     radii = gbd_matrix[:, :, 0].flatten()
     thetas = np.radians(gbd_matrix[:, :, 1].flatten())
@@ -65,19 +64,22 @@ def plot_gbd_with_convex_hull(gbd_matrix):
     ax.set_xlabel('L*')
     ax.set_ylabel('a*')
     ax.set_zlabel('b*')
-    ax.set_title('Gamut Boundary Descriptor with Convex Hull in LAB Space')
+    ax.set_title('Segment Maxima Gamut Boundary Descriptor with Convex Hull in LAB Space', fontsize=8)
 
     # Save the plot without displaying it
-    plt.savefig('gamut_boundary_descriptor_convex_hull_lab_space.png')
+    plt.savefig(output_path)
     plt.close()
 
+    # Calculate and print the volume of the gamut
+    gamut_volume = hull.volume
+    print(f"The volume of the gamut is: {gamut_volume} cubic LAB units")
 
+# Example usage:
 # Load your image
 image = io.imread('sample.jpg')  # replace with your image path
 
 # Calculate the GBD
 gbd_matrix = calculate_gbd_segment_maxima(image, m=16, n=16)
 
-# Plot and save the GBD with the Convex Hull
-plot_gbd_with_convex_hull(gbd_matrix)
-
+# Plot the GBD, save the plot, and calculate the volume
+plot_gbd_with_convex_hull_and_calculate_volume(gbd_matrix, output_path='gamut_boundary.png')
