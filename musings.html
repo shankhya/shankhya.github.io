@@ -116,6 +116,83 @@
 				    I am deeply interested in the field of color science, colorimetry and color management. However, I am not a coder. I take help from the web and try to solve problems that I find interesting. This section contains some attempts to explore areas that I am fascinated about. Some of them are quite trivial, yet I think they may be of some use to others who share the same passion and interest.</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>23.08.2024</b>: Implementation of Vividness-Preserved (VP) and Depth-Preserved (DP) Gamut Compression Algorithms</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					    The Vividness-Preserved (VP) and Depth-Preserved (DP) Gamut Compression Algorithms are designed to compress the color 
+					gamut of an image while preserving key perceptual attributes. Vividness-Preserved (VP) focuses on maintaining the vividness 
+					or saturation of colors during the compression process. This is achieved by scaling both the lightness (L*) and chroma (C*) 
+					of each color towards the black point (i.e., reducing their values proportionally), thereby compressing the color gamut into 
+					the target space without significantly dulling the colors. The result is a more vibrant image, where the perceived intensity 
+					and saturation of colors are preserved as much as possible within the limitations of the target gamut. Depth-Preserved (DP), 
+					on the other hand, emphasizes preserving the perceived depth or contrast of the image. The DP method scales lightness towards 
+					the cusp lightness (the brightest achievable lightness within the target gamut) while also proportionally scaling chroma. 
+					This approach ensures that the contrast between different colors in the image is maintained, preventing the image from appearing 
+					washed out or flat after gamut compression. The DP method is particularly useful in scenarios where maintaining the dynamic range 
+					of the image is crucial.</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/vpdp.py" target="_blank">Source code</a> |
+					    <a href="/musings/vpdp.pdf" target="_blank">Mathematical background</a> 
+					    				    
+					
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/vp_dp_images.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Comparison of mapped images against the original</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/vp_dp_gamuts.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Comparison of gamuts of mapped images against the original</figcaption>
+					        </figure>
+					    </div>
+					</div>
+				</div>
+				<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>23.08.2024</b>: Implementation of SGCK (Segmented Gamut Compression with Knee Scaling) Gamut Compression Algorithm</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					    The SGCK (Segmented Gamut Compression with Knee Scaling) Gamut Compression Algorithm is designed to map colors from a 
+					wide-gamut source to a narrower target gamut, while preserving perceptual color attributes like lightness 
+					and chroma. An implementation of the same has been given. The process involves two main steps: non-linear lightness mapping and knee scaling. In the first step, the lightness 
+					(L*) of each color is scaled, and if it exceeds a certain cusp lightness (representing the brightest color within the target gamut), 
+					it is capped. In the second step, the chroma (C*) is proportionally scaled to compress the color gamut towards the target space 
+					without significantly altering the hue. This approach aims to compress out-of-gamut colors smoothly into the target gamut while 
+					minimizing perceptual distortion, thereby preserving the overall appearance of the image even after compression. The SGCK method 
+					is effective in applications where maintaining the perceptual attributes of the image during gamut mapping is crucial.</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/sgck.py" target="_blank">Source code</a> |
+					    <a href="/musings/sgck.pdf" target="_blank">Mathematical background</a> 
+					    				    
+					
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/image_sgck.jpg" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Original image (left) and mapped image (right)</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gamut_sgck.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Gamut along the L-C plane of original (left) and mapped (right) images</figcaption>
+					        </figure>
+					    </div>
+					</div>
+				</div>
+				<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>22.08.2024</b>: Implementation of hue preserving minimum color difference gamut clipping (HPMINDE)</h3>
 				<div class="collapsible-content">
 					<p align="justify">
@@ -129,7 +206,7 @@
 					the original, showing that while the colors are adjusted to fit within the AdobeRGB gamut, the perceptual differences 
 					are minimized, and the hue is well-preserved. The method is effective but can be computationally intensive due to the 
 					point-by-point comparison required to maintain the hue and minimize color differences. Due to this, a compressed version 
-					of the image has been used for mapping purpose. The results are evident from the gamuts given below.
+					of the image has been used for mapping purpose. The results are evident from the gamuts given below.</p>
 					<span class="course-links">
 					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/hpminde.py" target="_blank">Source code</a> |
 					    <a href="/musings/hpminde.pdf" target="_blank">Mathematical background</a> 
