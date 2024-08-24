@@ -126,6 +126,111 @@
 				    I am deeply interested in the field of color science, colorimetry and color management. However, I am not a coder. I take help from the web and try to solve problems that I find interesting. This section contains some attempts to explore areas that I am fascinated about. Some of them are quite trivial, yet I think they may be of some use to others who share the same passion and interest.</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>24.08.2024</b>: Implementation of an improved segment maxima based GBD and other GBD methods</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					    Various methods for calculating Gamut Boundary Descriptors have been implemented. In an earlier post, I had
+					presented a method for calculating GBD using segment maxima method, with enclosing surface covered by convex hull. 
+						In this new method, I have used delaunay triangulation to enclose the surface using simplices. The gamut 
+						surfaces have been colorized to depict their corresponding L*a*b* values, a wireframe gamut surface
+						have also been presented. I have also plotted the gamut at constant L* values in the a*-b* plane. 
+					Another approach have also been implemente, where a RBF has been used to compute and plot GBD of an image.
+					Constrained Line Gamut Boundary (CLGB) and Flexible Sequential Gamut Boundary (FSLGB) have also been implemented
+						from GBD obtained using segment maxima method.
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gbd/single_slice.py" target="_blank">Source code for 2D GBD single slice</a> |
+					    
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gbd/multiple_slice.py" target="_blank">Source code for 2D GBD multiple slice</a> |
+					    <a href="/musings/gbd/gamut_slice.pdf" target="_blank">Mathematical background on 2D GBD</a> |
+						<a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gbd/rbf_gbd.py" target="_blank">Source code for RBF based GBD</a> |
+					    <a href="/musings/gbd/rbf.pdf" target="_blank">Mathematical background on RBF GBD</a> |
+						<a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gbd/smgbd_new.py" target="_blank">Source code for new SMGBD</a> |
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gbd/smgbd_multiple.py" target="_blank">Source code for multiple views using SMGBD</a> |
+					    <a href="/musings/gbd/smgbd_new.pdf" target="_blank">Mathematical background on new SMGBD</a> |
+						<a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gbd/clgb.py" target="_blank">Source code for CLGB</a> |
+					    <a href="/musings/gbd/clgb.pdf" target="_blank">Mathematical background on CLGB</a> |
+						<a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gbd/flsgb.py" target="_blank">Source code for FLSGB</a> |
+					    <a href="/musings/gbd/flsg" target="_blank">Mathematical background on FLSGB</a> 
+						
+					    				    
+					
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/gbd/output_gamut_plot.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">2D GBD for constant L*</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gbd/gamut_slices_output.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Multiple 2D GBD for various L*</figcaption>
+					        </figure>
+					    </div>
+						 <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gbd/gamut_rbf_output_optimized.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">RBF based GBD</figcaption>
+					        </figure>
+					    </div>
+						
+					</div>
+
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/gbd/gbd_surface.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Improved SMGBD (solid)</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gbd/gbd_wireframe_surface.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Improved SMGBD (wireframe)</figcaption>
+					        </figure>
+					    </div>
+						<div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gbd/gbd_surface_multiple_views.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Improved SMGBD (multiple views)</figcaption>
+					        </figure>
+					    </div>
+					</div>
+
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/gbd/clgb_gbd_hue_intersections.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">CLGBD</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gbd/gamut_boundary_intersection.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">FLSGBD</figcaption>
+					        </figure>
+					    </div>
+
+						<div class="col-sm-6">
+					        <figure>
+					            <img src="musings/gbd/multiple_gamut_boundaries_subplot.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">FLSGBD at various hue angles</figcaption>
+					        </figure>
+					    </div>
+						
+					</div>
+				</div>
+				<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>23.08.2024</b>: Implementation of Vividness-Preserved (VP) and Depth-Preserved (DP) Gamut Compression Algorithms</h3>
 				<div class="collapsible-content">
 					<p align="justify">
