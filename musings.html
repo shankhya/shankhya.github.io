@@ -126,6 +126,45 @@
 				    I am deeply interested in the field of color science, colorimetry and color management. However, I am not a coder. I take help from the web and try to solve problems that I find interesting. This section contains some attempts to explore areas that I am fascinated about. Some of them are quite trivial, yet I think they may be of some use to others who share the same passion and interest.</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>25.08.2024</b>: A method for color test target generation and extraction of color values</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					   A method is presented for generating a color test target based on user-defined LAB values and extracting RGB values from a scanned image of the target. 
+						These processes involve color space transformations, perspective geometry, and statistical methods. The test target has been made in 
+						accordance to the Gretag ColorChecker target. It contains 24 patches.
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/tar_gen/tar_gen.py" target="_blank">Source code for target generation</a> |
+					    
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/tar_gen/read_tar.py" target="_blank">Source code for reading test target</a> |
+					    <a href="/musings/tar_gen/tar_gen.pdf" target="_blank">Mathematical background on the process</a> |
+						
+						
+					    				    
+					
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/tar_gen/target.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Test target</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/tar_gen/debug_warped_image.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Extraction of RGB values from identified segmented patches</figcaption>
+					        </figure>
+					    </div>
+						
+						
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>24.08.2024</b>: Implementation of an improved segment maxima based GBD and other GBD methods</h3>
 				<div class="collapsible-content">
 					<p align="justify">
