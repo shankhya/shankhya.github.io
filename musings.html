@@ -126,6 +126,47 @@
 				    I am deeply interested in the field of color science, colorimetry and color management. However, I am not a coder. I take help from the web and try to solve problems that I find interesting. This section contains some attempts to explore areas that I am fascinated about. Some of them are quite trivial, yet I think they may be of some use to others who share the same passion and interest.</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>30.08.2024</b>: Simple display class and output class ICC profiles using LCMS</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					   Two C codes have been presented for the purpose of creating ICC profiles using the Little CMS (lcms) library, 
+					focusing on both sRGB and CMYK color spaces. For the sRGB profile defines the D65 white point, defining sRGB primaries, 
+					and tone reproduction curves (TRCs) specific to the sRGB color space. Other profile headers are also included such as the 
+					profile version, device class, and manufacturer signature, as well as the key tags like the media white point and profile 
+					description. The other code presents a method for creating a CMYK ICC profile for printers. The profile uses a transformation 
+					pipelines using look-up tables (LUTs) for converting between the CMYK space and the Profile Connection Space (PCS). A random data 
+					for the `AToB0` and `BToA0` tags due to the absence of real measurement data. Both use the lcms library's capabilities to create and manage ICC profiles.
+					
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/profile/sRGB.c" target="_blank">Source code for sRGB profile</a> |
+					    <a href="/musings/profile/rgb_profile.pdf" target="_blank">Elaboration on the sRGB profile</a> |
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/profile/cmyk_profile.c" target="_blank">Source code for CMYK profile</a> |
+					    <a href="/musings/profile/cmyk_profile.pdf" target="_blank">Elaboration on the CMYK profile</a> |
+					    <a href="https://littlecms.com/" target="_blank">Little CMS</a> |
+					    <a href="https://www.color.org/profileinspector.xalter/" target="_blank">ICC Profile Inspector</a>
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="profile/srgb.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">sRGB profile viewed through ICC Profile Inspector</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="profile/cmyk%20profile.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">CMYK profile viewed through ICC Profile Inspector</figcaption>
+					        </figure>
+					    </div>
+						
+					</div>
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>25.08.2024</b>: A method for color test target generation and extraction of color values</h3>
 				<div class="collapsible-content">
 					<p align="justify">
