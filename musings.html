@@ -135,7 +135,9 @@
 					profile version, device class, and manufacturer signature, as well as the key tags like the media white point and profile 
 					description. The other code presents a method for creating a CMYK ICC profile for printers. The profile uses a transformation 
 					pipelines using look-up tables (LUTs) for converting between the CMYK space and the Profile Connection Space (PCS). A random data 
-					for the `AToB0` and `BToA0` tags due to the absence of real measurement data. Both use the lcms library's capabilities to create and manage ICC profiles.
+					for the `AToB0` and `BToA0` tags due to the absence of real measurement data. The data obtained from the earlier post (ColorChecker) 
+					for instance can be used to populate the A2B CLUT and the code will create the corresponding B2A CLUT. For simplicity only A2B0 CLUT
+					have been presented in the code and that too represents an identify matrix. Both the codes use the lcms library's capabilities to create and manage ICC profiles.
 					
 					</p>
 					<span class="course-links">
