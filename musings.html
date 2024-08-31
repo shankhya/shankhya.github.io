@@ -126,6 +126,76 @@
 				    I am deeply interested in the field of color science, colorimetry and color management. However, I am not a coder. I take help from the web and try to solve problems that I find interesting. This section contains some attempts to explore areas that I am fascinated about. Some of them are quite trivial, yet I think they may be of some use to others who share the same passion and interest.</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>31.08.2024</b>: A simple amplitude modulated halftoning technique</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					   This code implements the halftoning process, which has been adapted from this <a href="https://stackoverflow.com/questions/10572274/how-to-create-cmyk-halftone-images-from-a-color-image/10575940#10575940" target="_blank">source</a>. 
+					The code is structured around a Python class called `HalftoneGenerator`, which  
+					provides a method to convert an image into its halftone representation. Depending on the user’s preferences, the code can 
+					generate either a grayscale or color halftone image. It processes each color channel (Cyan, Magenta, Yellow, and Black) 
+					separately, applying a rotation to avoid visual artifacts and then calculating the size of the dots based on the average 
+					intensity of the image in sampled regions. The code also offers flexibility in adjusting various parameters such as the 
+					size of the sample boxes, the scaling factor for dot size, the percentage of gray component removal, and the format in 
+					which the output images are saved. 
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/musings/halftone.py" target="_blank">Source code</a> |
+					    <a href="/musings/halftone.pdf.pdf" target="_blank">Mathematical background</a> |
+					    
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/lena.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Original image</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+					        <figure>
+					            <img src="musings/lena_halftoned.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Greyscale halftoned image</figcaption>
+					        </figure>
+					    </div>
+						
+					</div>
+
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/lena_halftoned_c.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Cyan separation</figcaption>
+					            </figure>
+					        
+					    </div>
+					    <div class="col-sm-6">
+    						<figure>
+        					<img src="musings/lena_halftoned_m.png" class="img-responsive img-rounded" alt="Image 4" style="display: block; margin: 0 auto;">
+        					<figcaption style="text-align: center; margin-top: 2px;">Magenta separation</figcaption>
+    						</figure>
+						</div>
+
+
+						<div class="col-sm-6">
+					        <figure>
+					            <img src="musings/lena_halftoned_y.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Yellow separation</figcaption>
+					        </figure>
+					    </div>
+						<div class="col-sm-6">
+					        <figure>
+					            <img src="musings/lena_halftoned_k.png" class="img-responsive img-rounded" alt="Image 4">
+					            <figcaption style="text-align: center;">Black separation</figcaption>
+					        </figure>
+					    </div>
+					</div>
+
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>30.08.2024</b>: Simple display class and output class ICC profiles using LCMS</h3>
 				<div class="collapsible-content">
 					<p align="justify">
