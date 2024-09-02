@@ -129,6 +129,42 @@
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>01.09.2024</b>: A 3D Color Gamut Viewer Application for Windows</h3>
 				<div class="collapsible-content">
 					<p align="justify">
+					  A method has been presented that evaluates the accuracy of various interpolation techniques for the characterization of a half-tone 
+					printer using the FOGRA39 dataset, which includes CMYK inputs and corresponding LAB color values. The techniques 
+					compared include Distance-Weighted Interpolation, Nearest Neighbor Interpolation, Linear Interpolation, 2nd and 
+					3rd Degree Polynomial Fitting, and an optimized Neural Network. The dataset was split into training and testing 
+					sets, and each method was used to predict the LAB values for the test set, with accuracy measured by the mean 
+					CIELAB color difference (ΔE). The results show that Linear Interpolation performed best with a mean ΔE of 0.14, 
+					closely followed by 3rd Degree Polynomial Fitting with a mean ΔE of 0.62. Distance-Weighted Interpolation and 
+					2nd Degree Polynomial Fitting also showed reasonable accuracy, with mean ΔE values of 2.28 and 1.83, respectively. 
+					In contrast, the Nearest Neighbor Interpolation and the Neural Network methods yielded higher mean ΔE values of 3.97 
+					and 3.95, respectively, indicating less accuracy. However, since this work was carried out using the characterization 
+					dataset, the results can vary dramatically if real world color data is used. 
+
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/charac_printer.py" target="_blank">Source code</a> |
+					    <a href="/musings/charac_printer.pdf" target="_blank">Mathematical background</a> |
+					    
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/fitting.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Comparison of fitting techniques on color accuracy</figcaption>
+					            </figure>
+					        
+					    </div>
+					   
+					</div>
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>01.09.2024</b>: A 3D Color Gamut Viewer Application for Windows</h3>
+				<div class="collapsible-content">
+					<p align="justify">
 					   An application that takes an image as input and displays the 3D color gamut of the colors in the image for Windows OS that I have developed in Python
 					is presented here. The code takes in the RGB data converts them to LAB colors and plots them in the space. A convex hull 
 					is used to compute the GBD. It also plots the convex hull surface by connecting the points in the LAB space. For 
