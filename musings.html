@@ -126,6 +126,42 @@
 				    I am deeply interested in the field of color science, colorimetry and color management. However, I am not a coder. I take help from the web and try to solve problems that I find interesting. This section contains some attempts to explore areas that I am fascinated about. Some of them are quite trivial, yet I think they may be of some use to others who share the same passion and interest.</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>03.09.2024</b>: A method for plotting the gamut for multiple chromaticities</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					  A method has been presented that creates the CIE 1931 chromaticity diagram and asks users for input on the number of 
+						colors they would want to plot in the space. Given a fixed number of points, the method then computes the convex
+						hull between them and returns the color gamut in the xy space enclosed by the colors.
+
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/cieplot.py" target="_blank">Source code</a> |
+					    <a href="/musings/cieplot.pdf" target="_blank">Mathematical background</a> 
+					    
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/cie.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">CIE 1931 chromaticity diagram</figcaption>
+					            </figure>
+					        
+					    </div>
+
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/ciegamut.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">The color gamut obtained between 6 colors</figcaption>
+					            </figure>
+					        
+					    </div>
+					   
+					</div>
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>02.09.2024</b>: Comparison of techniques for halftone printer characterization</h3>
 				<div class="collapsible-content">
 					<p align="justify">
