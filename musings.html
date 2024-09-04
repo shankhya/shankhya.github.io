@@ -126,6 +126,43 @@
 				    I am deeply interested in the field of color science, colorimetry and color management. However, I am not a coder. I take help from the web and try to solve problems that I find interesting. This section contains some attempts to explore areas that I am fascinated about. Some of them are quite trivial, yet I think they may be of some use to others who share the same passion and interest.</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>04.09.2024</b>: A method for visualizing the CIELAB space at constant lightness planes</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					  A method is presented here that is designed to allow a user to explore and interact with the CIELAB color space.
+						It allows users to specify a lightness value and interactively click on points in a 2D plot representing the a* and b* color axes. 
+						The clicked points are annotated with their respective a* and b* coordinates. Once a specified number of points is selected, 
+						the convex hull is drawn around these points, representing the boundary enclosing these selected colors in the CIELAB space.
+
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/cielab.py" target="_blank">Source code</a> |
+					    <a href="/musings/cielab.pdf" target="_blank">Mathematical background</a> 
+					    
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/cielab.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">CIELAB space at L*=50 plane</figcaption>
+					            </figure>
+					        
+					    </div>
+
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/cielabgamut.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">The color gamut obtained between 6 colors</figcaption>
+					            </figure>
+					        
+					    </div>
+					   
+					</div>
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>03.09.2024</b>: A method for plotting the gamut for multiple chromaticities</h3>
 				<div class="collapsible-content">
 					<p align="justify">
