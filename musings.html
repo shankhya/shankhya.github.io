@@ -135,6 +135,44 @@
 				</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>04.09.2024</b>: A method for transforming tristimulus value to perceptual correlates using CIECAM models</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					  A method is presented that allows users to convert CIE XYZ tristimulus values into perceptual correlates using either the CIECAM16 or 
+					CIECAM02 color appearance models. The code takes input from the user, including the test sample's XYZ values, the reference white's XYZ 
+					values, adapting luminance, and background luminance, and computes key appearance attributes such as lightness, chroma, hue, saturation, 
+					brightness, and colorfulness. Based on the user's choice of model (CIECAM16 or CIECAM02), the code applies the corresponding mathematical 
+					transformations, including chromatic adaptation, non-linear compression, and opponent color dimension calculations, and returns the predicted 
+					perceptual correlates for the given viewing conditions.
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/ciecam.py" target="_blank">Source code</a> |
+					    <a href="/musings/ciecam.pdf" target="_blank">Mathematical background</a> 
+					    
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/ciecam02.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Outputs from CIECAM02 model</figcaption>
+					            </figure>
+					        
+					    </div>
+
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/ciecam16.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Outputs from CIECAM16 model</figcaption>
+					            </figure>
+					        
+					    </div>
+					   
+					</div>
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>04.09.2024</b>: A method for visualizing the CIELAB space at constant lightness planes</h3>
 				<div class="collapsible-content">
 					<p align="justify">
