@@ -140,7 +140,7 @@
 				<div class="collapsible-content">
 					<p align="justify">
 					   A nearest neighbor gamut clipping where an RGB image is transformed to fit within the CMYK gamut, 
-					specifically using the Fogra39 dataset. The process begins by converting the image from RGB to the perceptually uniform 
+					specifically using the Fogra39 dataset is presented. The process converts the image from RGB to the perceptually uniform 
 					LAB and LCH color spaces. A convex hull is then computed for both the RGB image and the CMYK (Fogra39) dataset in the LCH 
 					color space. Any colors in the RGB image that fall outside the CMYK gamut are mapped to their nearest neighbor on the 
 					boundary of the CMYK convex hull using Euclidean distance.  
@@ -150,7 +150,7 @@
 					of 2.2723 is obtained.
 					</p>
 					<span class="course-links">
-					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/gamut_mapping/gamut_clip.py" target="_blank">Source code</a> |
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gamut_mapping/gamut_clip.py" target="_blank">Source code</a> |
 					    <a href="/musings/gamut_mapping/gamut_clip.pdf" target="_blank">Mathematical background</a> 
 					    
 					</span>
