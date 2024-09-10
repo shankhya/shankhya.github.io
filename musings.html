@@ -135,6 +135,43 @@
 				</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>10.09.2024</b>: A method for Gamut Compression towards L=50</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					  This method involves compressing an image's RGB gamut to fit within the smaller CMYK device gamut. Out-of-gamut 
+					colors in the RGB space are compressed by mapping them to the nearest boundary point of the CMYK gamut, while in-gamut 
+					colors are proportionally compressed towards a target lightness value of 𝐿∗=50 L∗=50. This ensures that all colors fit 
+					within the CMYK space while preserving the image’s overall lightness and reducing chroma. A DeltaE2000 of 6.1366 is obtained
+					between original and gamut compressed images.
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gamut_mapping/gamut_comp.py" target="_blank">Source code</a> |
+					    <a href="/musings/gamut_mapping/gamut_comp.pdf" target="_blank">Mathematical background</a> 
+					    
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/gamut_mapping/gamut_comp.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Gamut comparison after compression</figcaption>
+					            </figure>
+					        
+					    </div>
+
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/gamut_mapping/gamut_comp_image.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Comparison of original and gamut compressed images</figcaption>
+					            </figure>
+					        
+					    </div>
+					   
+					</div>
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>09.09.2024</b>: A method to implement nearest neighbor gamut clipping</h3>
 				<div class="collapsible-content">
