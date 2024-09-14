@@ -135,6 +135,45 @@
 				</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>14.09.2024</b>: A sigmoidal gamut compression algorithm</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					  The presented method performs a gamut compression process on an image. It calculates the chroma and lightness 
+					boundaries of the CMYK printer gamut and then applies a sigmoidal compression to the image's chroma and lightness values. 
+					This ensures that all colors fit within the CMYK printer gamut, preventing out-of-gamut colors. The compressed image is 
+					then reconstructed and displayed side-by-side with the original. Additionally, convex hulls of the original, compressed, 
+					and CMYK gamuts are plotted in 3D to visualize the color space reduction, with the compressed gamut fitting entirely within 
+					the CMYK gamut. The volumes of each gamut are also calculated to quantify the reduction in color space. A Delta E 2000 of 3.93
+					is obtained between original and gamut compressed images.
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gamut_mapping/sgcm.py" target="_blank">Source code</a> |
+					    <a href="/musings/gamut_mapping/sgcm.pdf" target="_blank">Mathematical background</a> 
+					    
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/gamut_mapping/sgcm_comparison.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Gamut comparison</figcaption>
+					            </figure>
+					        
+					    </div>
+
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/gamut_mapping/sgcm_image.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">Comparison of original and gamut compressed images</figcaption>
+					            </figure>
+					        
+					    </div>
+					   
+					</div>
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>13.09.2024</b>: Spectral Reconstruction from LAB Data Using Neural Networks</h3>
 				<div class="collapsible-content">
 					<p align="justify">
