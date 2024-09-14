@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from skimage import io, color
+from skimage.color import deltaE_ciede2000
 from scipy.interpolate import interp1d
 from scipy.ndimage import distance_transform_edt
 import matplotlib.pyplot as plt
@@ -102,7 +103,7 @@ rgb_image_compressed = np.clip(rgb_image_compressed, 0, 1)
 rgb_image_compressed_uint8 = (rgb_image_compressed * 255).astype(np.uint8)
 
 # *** Step 9: Plot Before and After Images ***
-fig, axes = plt.subplots(2, 1, figsize=(12, 12))
+fig, axes = plt.subplots(1, 2, figsize=(12, 12))
 
 # Plot the original image
 axes[0].imshow(image)
@@ -199,3 +200,14 @@ ax.legend(handles=legend_elements, loc='upper right')
 
 plt.tight_layout()
 plt.show()
+
+# *** Step 15: Calculate ΔE 2000 (Color Difference) ***
+# Reshape lab_image and lab_image_compressed for comparison
+lab_image_compressed_reshaped = lab_image_compressed.reshape(-1, 3)
+
+# Compute the ΔE 2000 color difference between original and compressed images
+delta_e_2000 = deltaE_ciede2000(lab_colors, lab_image_compressed_reshaped)
+
+# Calculate the mean ΔE 2000 value
+mean_delta_e_2000 = np.mean(delta_e_2000)
+print(f"Mean ΔE 2000 between original and compressed images: {mean_delta_e_2000:.2f}")
