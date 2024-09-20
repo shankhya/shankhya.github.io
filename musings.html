@@ -135,6 +135,39 @@
 				</p>
 				<hr>
 
+				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>20.09.2024</b>: Implementing modified convex hull for GBD computation</h3>
+				<div class="collapsible-content">
+					<p align="justify">
+					  The presented method calculates and visualizes the Gamut Boundary Descriptor (GBD) in LAB color space using a modified convex hull 
+					approach adapted from <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/3018/0000/Method-for-quantifying-the-color-gamut-of-an-output-device/10.1117/12.271580.short#_=_" target="_blank">Bala et. al</a>. It first converts the input image to LAB space, then applies a pre-conditioning transformation to adjust the 
+					distance of each point from a reference point (typically [50, 0, 0]). The LAB space is segmented into bins based on 
+					spherical coordinates, and the point with the maximum radial distance in each bin is selected as the segment maxima. 
+					After applying a convex hull to these maxima points, an inverse transformation returns the points to LAB space, and the 
+					resulting 3D surface is visualized. The granularity of the convex hull and size of the triangles can be adjusted by 
+					increasing the segmentation bins, making the surface more detailed and precise.
+					</p>
+					<span class="course-links">
+					    <a href="https://raw.githubusercontent.com/shankhya/shankhya.github.io/main/musings/gbd/smgbd_conv_hull.py" target="_blank">Source code</a> |
+					    <a href="/musings/gbd/smgbd_conv_hull.pdf" target="_blank">Mathematical background</a> 
+					    
+					</span>
+					<!-- Images related to this section -->
+					<div class="row" style="padding: 2%; display: flex; align-items: center;">
+					    <div class="col-sm-6">
+						    <figure>
+					            <img src="musings/gbd/smgbd_conv_hull.png" class="img-responsive img-rounded" alt="Image 5">
+					            <figcaption style="text-align: center;">GBD based on modified convex hull</figcaption>
+					            </figure>
+					        
+					    </div>
+
+					  
+					   
+					</div>
+					</div>
+					<button class="see-more-btn" onclick="toggleContent(this)">See more...</button>
+
+
 				
 				<h3><i class="fa fa-bell" aria-hidden="true"></i> <b>18.09.2024</b>: Predicting Perceptual Attributes Using Neural Networks</h3>
 				<div class="collapsible-content">
