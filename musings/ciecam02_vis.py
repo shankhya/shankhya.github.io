@@ -1,19 +1,11 @@
-# Attempt to implement a CIECAM02 demo.
-# This notebook-style script will:
-# 1. Try to use the `colour` library for an accurate CIECAM02 implementation.
-# 2. If `colour` isn't available, fall back to a simplified approximation using CIELAB and clearly notify the user.
-# 3. Generate a palette of colors (varying hue and lightness), compute appearance attributes under three viewing conditions,
-#    and plot the results (J (lightness), C (chroma), and h (hue angle) for each condition).
-# 4. Display the palette images under different viewing conditions (via the appearance model when available).
-#
-# The code will create visual output within this notebook environment.
+#CIECAM02 demo
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Helper: generate a palette of colors in sRGB by sweeping hue and lightness
+
 def generate_palette(num_hues=12, num_lightness=5):
-    # We'll generate colors in HCL-like space via converting from CIELAB-ish approximation.
+   
     hues = np.linspace(0, 360, num_hues, endpoint=False)
     lights = np.linspace(30, 90, num_lightness)  # perceptual lightness-like
     palette = []
@@ -22,8 +14,7 @@ def generate_palette(num_hues=12, num_lightness=5):
         row = []
         row_coords = []
         for h in hues:
-            # Use HCL -> approximate to sRGB via simple conversion:
-            # We'll create an sRGB color from H,S,V like HSV but tuned to look good.
+      
             # Use H (hue), S (fixed), V from L normalized.
             H = h / 360.0
             S = 0.75
@@ -59,18 +50,15 @@ palette, coords = generate_palette(num_hues=24, num_lightness=6)
 # Flatten colors for processing
 colors_rgb = palette.reshape(-1, 3)
 
-# We'll try to use 'colour' for true CIECAM02. If it isn't available, we'll fall back to CIELAB-based approx.
 use_colour = False
 try:
     import colour
     from colour.appearance import CIECAM02_Specification, CIECAM02_InductionFactors, XYZ_to_CIECAM02, CIECAM02_to_XYZ
-    # Also import colour.models for sRGB <-> XYZ
     from colour import sRGB_to_XYZ, XYZ_to_sRGB, xyY_to_XYZ, XYZ_to_xyY
     use_colour = True
 except Exception as e:
     print("`colour` library not available in this environment. Falling back to a CIELAB-based approximation for demo purposes.")
     print("If you want a full CIECAM02 implementation, please install the 'colour-science' package and re-run.")
-    # We'll use skimage's rgb2lab if available, else implement a simple srgb->lab via colorspacious or none.
     try:
         from skimage import color as skcolor
         has_skimage = True
@@ -116,9 +104,9 @@ def compute_ciecam02_with_colour(rgb_colors, condition_name):
     h = np.array([s.h for s in specs])
     return J, C, h
 
-# Fallback: compute approximate "appearance attributes" using CIELAB if `colour` is not present
+
 def compute_approx_appearance_with_lab(rgb_colors, condition_name):
-    # Use skimage if available to compute Lab (D65)
+   
     if has_skimage:
         lab = skcolor.rgb2lab(rgb_colors.reshape(1,-1,3)).reshape(-1,3)
     else:
@@ -238,3 +226,4 @@ cjt.display_dataframe_to_user("CIECAM02 Demo Samples", df)
 out_path = "/mnt/data/ciecam02_demo_palette.png"
 fig.savefig(out_path)
 print(f"Saved a summary figure to: {out_path}")
+
