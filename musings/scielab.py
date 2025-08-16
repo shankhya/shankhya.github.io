@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter
 import os
 
-# Try to import skimage for color conversions and sample images
+# import skimage for color conversions and sample images
 has_skimage = True
 try:
     from skimage import data, color, util, img_as_float, img_as_ubyte
@@ -13,7 +13,7 @@ except Exception as e:
     has_skimage = False
     print("skimage not available; falling back to basic sRGB->Lab approximations.")
 
-# Try to import ciede2000 implementation (skimage has deltaE_ciede2000)
+# import ciede2000 implementation (skimage has deltaE_ciede2000)
 has_ciede2000 = True
 try:
     from skimage.color import deltaE_ciede2000
@@ -21,13 +21,13 @@ except Exception as e:
     has_ciede2000 = False
     print("CIEDE2000 function not available; will use CIE76 (simple Euclidean Lab) as fallback.")
 
-# Utility: convert sRGB image (0..1) to Lab using skimage if available, else approximate
+
 def srgb_to_lab(img):
     # img assumed float in [0,1], shape HxWx3
     if has_skimage:
         return color.rgb2lab(img)
     else:
-        # approximate conversions (same as earlier fallback)
+       
         def srgb_to_linear(rgb):
             mask = rgb <= 0.04045
             lin = np.where(mask, rgb/12.92, ((rgb+0.055)/1.055)**2.4)
@@ -54,7 +54,6 @@ def srgb_to_lab(img):
         xyz = linear_srgb_to_xyz(rgb_lin)
         return xyz_to_lab(xyz)
 
-# Utility: compute pixelwise delta E using CIEDE2000 if available else Euclidean in Lab (CIE76)
 def delta_e_map(lab_ref, lab_test):
     # lab_ref/test shape HxWx3, L in 0..100
     if has_ciede2000 and has_skimage:
@@ -255,3 +254,4 @@ imageio.imsave("/mnt/data/de_noise.png", (normalize_for_display(de_noise)*255).a
 imageio.imsave("/mnt/data/sc_noise.png", (normalize_for_display(sc_noise)*255).astype(np.uint8))
 
 print("Saved additional map images: /mnt/data/de_hue.png, /mnt/data/sc_hue.png, /mnt/data/de_noise.png, /mnt/data/sc_noise.png")
+
