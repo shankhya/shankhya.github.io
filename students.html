@@ -133,50 +133,68 @@
 						<img class="image2 img-rounded" src="images/image.jpg" alt="Name" >
 				</div>
 			</div>
-<div class="container">
-	<!-- Announcements Section -->
-	<div class="row">
-		<div class="col-sm-12" style="background-color:white;padding:2%;">
-			<h3><i class="fa fa-bullhorn" aria-hidden="true"></i> Announcements</h3>
-			<ul style="list-style-type:none; padding-left: 0;">
-				<!-- First 5 always visible -->
-				<li><i class="fa fa-chevron-circle-right"></i> Internal sessional exam of Color Technology for DPS4 on 05.07.2023 in Room No. B/1/104 from 11:30 AM.</li>
-				<li><i class="fa fa-chevron-circle-right"></i> Seminar on Major Projects for DPS6 on 30.06.2023 in Room No. B/1/O103 from 11:30 AM.</li>
-				<li><i class="fa fa-chevron-circle-right"></i> DPS4 & DPS6 2nd Continuous Internal Assessment from 26.06.2023 to 28.06.2023 at Room No. B/1/O303</li>
-				<li><i class="fa fa-chevron-circle-right"></i> DPS4: DPP & CT External Sessional Exam: 16.11.2022 10:30 AM onward in my office</li>
-				<li><i class="fa fa-chevron-circle-right"></i> DPS2 MSP External Sessional Exam: 17.11.2022 10:30 AM Onward in my office</li>
+<!-- Announcements Section (REPLACE your current block with this) -->
+<div class="row">
+  <div class="col-sm-12" style="background-color:white;padding:2%;">
+    <h3><i class="fa fa-bullhorn" aria-hidden="true"></i> Announcements</h3>
 
-				<!-- Collapsed Announcements -->
-				<div class="collapse" id="moreAnnouncements">
-					<li><i class="fa fa-chevron-circle-right"></i> Extra Announcement 1: Something scheduled later...</li>
-					<li><i class="fa fa-chevron-circle-right"></i> Extra Announcement 2: Another upcoming event...</li>
-					<li><i class="fa fa-chevron-circle-right"></i> Extra Announcement 3: Any more details here...</li>
-					<!-- Add as many as needed -->
-				</div>
-			</ul>
+    <!-- Put ALL announcements here as <li> — the script will split them automatically -->
+    <ul id="annFull" style="list-style-type:none; padding-left: 0;">
+      <li><i class="fa fa-chevron-circle-right"></i> Internal sessional exam of Color Technology for DPS4 on 05.07.2023 in Room No. B/1/104 from 11:30 AM.</li>
+      <li><i class="fa fa-chevron-circle-right"></i> Seminar on Major Projects for DPS6 on 30.06.2023 in Room No. B/1/O103 from 11:30 AM.</li>
+      <li><i class="fa fa-chevron-circle-right"></i> DPS4 & DPS6 2nd Continuous Internal Assessment from 26.06.2023 to 28.06.2023 at Room No. B/1/O303</li>
+      <li><i class="fa fa-chevron-circle-right"></i> DPS4: DPP & CT External Sessional Exam: 16.11.2022 10:30 AM onward in my office</li>
+      <li><i class="fa fa-chevron-circle-right"></i> DPS2 MSP External Sessional Exam: 17.11.2022 10:30 AM Onward in my office</li>
 
-			<!-- Toggle Button -->
-			<a class="btn btn-link p-0" data-bs-toggle="collapse" href="#moreAnnouncements" role="button" aria-expanded="false" aria-controls="moreAnnouncements" id="toggleMore">
-				More..
-			</a>
-		</div>
-	</div>
+      <!-- You can keep extra items here too — script will move them into the collapsed section automatically -->
+      <li><i class="fa fa-chevron-circle-right"></i> Extra Announcement 1: Something scheduled later...</li>
+      <li><i class="fa fa-chevron-circle-right"></i> Extra Announcement 2: Another upcoming event...</li>
+      <li><i class="fa fa-chevron-circle-right"></i> Extra Announcement 3: Any more details here...</li>
+    </ul>
+
+    <!-- Toggle link (Bootstrap 3 uses data-toggle="collapse") -->
+    <a id="toggleMore" class="btn btn-link" role="button" data-toggle="collapse" href="#moreAnnouncements" aria-expanded="false" aria-controls="moreAnnouncements" style="display:none; padding:0; margin-top:8px; display:inline-block;">
+      More..
+    </a>
+  </div>
 </div>
 
+<!-- Script to split list into visible (first 5) + collapsed (rest) and to toggle text -->
 <script>
-	// Change "More.." to "Less.." dynamically
-	document.addEventListener("DOMContentLoaded", function () {
-		const toggleBtn = document.getElementById("toggleMore");
-		const collapseEl = document.getElementById("moreAnnouncements");
+  $(function () {
+    var $all = $('#annFull');
+    var $items = $all.children('li');
+    var showCount = 5;
 
-		collapseEl.addEventListener("shown.bs.collapse", function () {
-			toggleBtn.textContent = "Less..";
-		});
-		collapseEl.addEventListener("hidden.bs.collapse", function () {
-			toggleBtn.textContent = "More..";
-		});
-	});
+    // Only do splitting if there are more than showCount items
+    if ($items.length > showCount) {
+      // Create collapse wrapper with a nested UL (valid HTML)
+      var $moreWrap = $('<div class="collapse" id="moreAnnouncements"><ul class="list-unstyled" id="annCollapsed"></ul></div>');
+      // Move items index >= showCount into the collapsed UL
+      $items.slice(showCount).appendTo($moreWrap.find('ul'));
+
+      // Insert collapse wrapper after the main UL
+      $all.after($moreWrap);
+
+      // Show the toggle link (it was hidden by default)
+      $('#toggleMore').show();
+
+      // Update link text on expand/collapse (Bootstrap 3 events)
+      $('#moreAnnouncements').on('shown.bs.collapse', function () {
+        $('#toggleMore').text('Less..').attr('aria-expanded', 'true');
+      });
+      $('#moreAnnouncements').on('hidden.bs.collapse', function () {
+        $('#toggleMore').text('More..').attr('aria-expanded', 'false');
+        // Keep the button in view when collapsing (optional)
+        $('#toggleMore')[0].scrollIntoView(true);
+      });
+    } else {
+      // No extra items — keep toggle hidden
+      $('#toggleMore').hide();
+    }
+  });
 </script>
+
 
 
 	<!-- Announcements Section -->
