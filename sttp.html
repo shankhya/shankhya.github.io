@@ -18,43 +18,51 @@
     <link rel="stylesheet" href="css/academicons-1.8.0/css/academicons.css">
     <link rel="stylesheet" href="css/layout.css">
 <style>
-  .sttp-panel {
-    background-color: #f7f7f7;
-    padding: 15px 20px;
-    border-radius: 4px;
-    margin-top: 0;          /* already changed earlier */
-    margin-bottom: 15px;
-  }
+  /* Grey card */
+.sttp-panel {
+  background-color: #f7f7f7;
+  padding: 15px;          /* uniform padding */
+  border-radius: 4px;
+  margin-top: 0;
+  margin-bottom: 0;       /* so card bottom aligns with column bottom */
+  height: 100%;           /* fill the column height */
+}
 
-  /* Make the hero row look tidy */
-  .row.info {
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
+ /* Make the hero row flex so both columns stretch to same height */
+.row.info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-  /* Make the banner image fill the full column height */
-  .sttp-banner {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;      /* crops if needed, doesn’t distort */
-    display: block;
-  }
+ /* Banner image should fill right column */
+.sttp-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-  .important-dates {
-    margin-top: 10px;
-    padding-top: 8px;
-    border-top: 1px solid #ddd;
-    font-size: 0.9em;
-  }
+/* Important dates inside the card */
+.important-dates {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
+}
 
-  .important-dates ul.info {
-    margin-bottom: 0;
-  }
+.important-dates ul.info {
+  margin-bottom: 0;
+}
 
-  /* Align text padding with About-section */
-  .bio-section {
-    padding: 15px 20px !important;
-  }
+ .bio-section {
+  padding: 15px !important;
+}
+
+
+    
 </style>
 
 
