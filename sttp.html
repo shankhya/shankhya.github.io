@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STTP on Colorimetry, ICC Color Management and Process Control</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="STTP on Colorimetry, ICC Color Management and Process Control in Print Production">
+    <meta name="keywords" content="STTP, Colorimetry, ICC Color Management, Process Control, Printing Technology, RIPT">
+    <meta name="author" content="Regional Institute of Printing Technology, Kolkata">
+    <meta name="msvalidate.01" content="DC94E1683197E154758452EFDE4EC02A" />
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/academicons-1.8.0/css/academicons.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!---start of auth---
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCAeStJWaqULRMZvJfaBaK0m4lHdCkbg1I",
+        authDomain: "githubwebpage-49237.firebaseapp.com",
+        projectId: "githubwebpage-49237",
+        storageBucket: "githubwebpage-49237.appspot.com",
+        messagingSenderId: "327422243989",
+        appId: "1:327422243989:web:0f72dc063cfa25672c579c",
+        measurementId: "G-YYE0NDK4PD"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const auth = firebase.auth();
+
+      function signUp() {
+        const email = prompt("Please enter your email");
+        const password = prompt("Please enter your password");
+        auth.createUserWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            console.log("User signed up:", userCredential.user);
+          })
+          .catch((error) => {
+            console.error("Error signing up:", error);
+          });
+      }
+
+      function signIn() {
+        const email = prompt("Please enter your email");
+        const password = prompt("Please enter your password");
+        auth.signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            console.log("User signed in:", userCredential.user);
+            document.getElementById('sign-out').style.display = 'block';
+            document.getElementById('sign-in').style.display = 'none';
+            document.getElementById('sign-up').style.display = 'none';
+          })
+          .catch((error) => {
+            console.error("Error signing in:", error);
+          });
+      }
+
+      function signOutUser() {
+        auth.signOut().then(() => {
+          console.log("User signed out");
+          document.getElementById('sign-out').style.display = 'none';
+          document.getElementById('sign-in').style.display = 'block';
+          document.getElementById('sign-up').style.display = 'block';
+        }).catch((error) => {
+          console.error("Error signing out:", error);
+        });
+      }
+
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          console.log("User is signed in:", user);
+          document.getElementById('sign-out').style.display = 'block';
+          document.getElementById('sign-in').style.display = 'none';
+          document.getElementById('sign-up').style.display = 'none';
+        } else {
+          console.log("No user is signed in");
+          document.getElementById('sign-out').style.display = 'none';
+          document.getElementById('sign-in').style.display = 'block';
+          document.getElementById('sign-up').style.display = 'block';
+        }
+      });
+    </script>
+    <---!end of script--->
+
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6NX48XKRL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z6NX48XKRL');
+</script>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <!-- Keep structure; you can add a dedicated STTP tab if you want -->
+                    <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="research.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Research</a></li>
+                    <li><a href="publications.html"><i class="fa fa-book" aria-hidden="true"></i> Publications</a></li>
+                    <li><a href="students.html"><i class="fa fa-users" aria-hidden="true"></i> Students section</a></li>
+                    <li><a href="resources.html"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Resources</a></li>
+                    <li><a href="teaching.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching</a></li>
+                    <li><a href="media.html"><i class="fa fa-television" aria-hidden="true"></i> Media</a></li>
+                    <li><a href="musings.html"><i class="fa fa-grav" aria-hidden="true"></i> Musings</a></li>
+                    <!-- Optional new menu item; uncomment if you want it in navbar
+                    <li class="active"><a href="sttp.html"><i class="fa fa-certificate" aria-hidden="true"></i> STTP</a></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Hero / Quick Info Row -->
+        <div class="row info">
+            <div class="col-sm-4" style="background-color:white;">
+                <br />
+                <ul class="info">
+                    <li>
+                        <span class="glyphicon glyphicon-certificate"></span>
+                        <b>STTP on Colorimetry, ICC Color Management and Process Control in Print Production</b>
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-education"></span>
+                        Organised by Department of Printing Technology,<br>
+                        Regional Institute of Printing Technology, Kolkata
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        <b>Dates:</b> DD–DD Month YYYY
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                        <b>Mode:</b> Online (Microsoft Teams)
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-user"></span>
+                        <b>Chief Patron:</b> Prof. Haroprosad Mondal, Principal (In-Charge), RIPT
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-user"></span>
+                        <b>Coordinator:</b> Mr. Shankhya Debnath, HoD & Lecturer, Dept. of Printing Technology
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <a href="mailto:shankhya@wbscte.ac.in" style="color:black;">shankhya@wbscte.ac.in</a>
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-phone-alt"></span> 033-2414-6432 (O)
+                    </li>
+                </ul>
+                <hr style="width:80%;">
+                <ul class="info">
+                    <li>
+                        <!-- Placeholders for brochure/registration links -->
+                        <a href="STTP_Brochure.pdf" target="_blank">
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Brochure
+                        </a><br />
+                        <a href="https://forms.gle/your-google-form-link" target="_blank">
+                            <i class="fa fa-edit" aria-hidden="true"></i> Registration Form
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-8" style="background-color:white;padding:0px;">
+                <!-- You can replace bg_sttp.png with a banner image for the STTP -->
+                <img class="img-responsive img-rounded image1" src="images/bg_sttp.png" alt="STTP Banner" width="100%">
+            </div>
+        </div>
+
+        <!-- About the STTP -->
+        <div class="row">
+            <div class="col-sm-9 bio-section" style="background-color:white;padding:2%;">
+                <h3><i class="fa fa-info-circle" aria-hidden="true"></i> About the STTP</h3>
+                <p style="text-align: justify;">
+                    This Short-Term Training Programme (STTP) focuses on
+                    <b>colorimetry, ICC color management and process control in print production</b>.
+                    With increasing demands for predictable colour reproduction and conformance to
+                    international standards, it is essential to move from trial-and-error methods to
+                    <b>measurement-based quality assurance</b>. Over three days, the programme will
+                    introduce participants to CIE colorimetry, spectrophotometry, ICC profile
+                    architecture, device calibration and characterisation, and standards-driven
+                    process control. Lectures are complemented by hands-on demonstrations using
+                    spectrophotometers, profiling hardware and process control software, enabling
+                    participants to directly connect theoretical concepts with practical implementation
+                    in their own production or teaching environments.
+                </p>
+            </div>
+
+            <div class="col-sm-3" style="background-color:white;padding:2%;">
+                <h3><i class="fa fa-bullseye" aria-hidden="true"></i> Thrust Areas</h3>
+                <ul style="list-style-type:none; padding-left: 0;">
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> Colorimetry &amp; spectrophotometry</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> ICC colour management architecture</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> Display &amp; printer profiling</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> Process control &amp; QA</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> ISO &amp; CRPC-based print standards</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Objectives & Target Audience -->
+        <div class="row professional-activities-section">
+            <div class="col-sm-6" style="background-color:white;padding:2%;">
+                <h3><i class="fa fa-flag" aria-hidden="true"></i> Objectives</h3>
+                <ul style="list-style-type:none; padding-left: 0;">
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Introduce fundamentals of colorimetry and spectrophotometry for objective evaluation of print and colour reproduction.
+                    </li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Develop a clear understanding of ICC color management architecture, including colour dependence/independence, profile types and rendering intents.
+                    </li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Equip participants with practical skills in device calibration and characterisation, including display calibration, printer characterisation and ICC profile creation.
+                    </li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Demonstrate the use of process control tools and software for monitoring print quality through control strips, TVI, ΔE tolerances and capability indices.
+                    </li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Familiarise participants with key international print standards (ISO 3664, ISO 13655, ISO 12647 series, ISO/PAS 15339 CRPCs, ISO 20654) and their application in teaching, research and industrial workflows.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6" style="background-color:white;padding:2%;">
+                <h3><i class="fa fa-users" aria-hidden="true"></i> Target Participants</h3>
+                <ul style="list-style-type:none; padding-left: 0;">
+                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Print production managers and supervisors</li>
+                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Quality assurance professionals in printing and packaging</li>
+                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Faculty members and researchers in Printing / Graphic / Media Technology</li>
+                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Postgraduate students and professionals seeking to upgrade skills in colour management and process control</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Programme Schedule -->
+        <div class="row professional-activities-section">
+            <div class="col-sm-12" style="background-color:white;padding:2%;">
+                <h3><i class="fa fa-calendar" aria-hidden="true"></i> Programme Schedule (3 Days)</h3>
+
+                <h4><b>Day 1</b></h4>
+                <ul>
+                    <li><b>10:00 AM – 10:30 AM:</b> Inauguration of STTP – Introduction to Course &amp; Objectives</li>
+                    <li><b>10:30 AM – 12:00 PM:</b> Colorimetry – CIE Colorimetry: XYZ, Yxy, Lab, Lch; device dependence/independence; ΔE</li>
+                    <li><b>12:00 PM – 1:00 PM:</b> Spectrophotometry – Measurement geometries and conditions (M0, M1, M2)</li>
+                    <li><b>1:00 PM – 2:00 PM:</b> Break</li>
+                    <li><b>2:00 PM – 3:00 PM:</b> Demo – Measuring colour, spectral reflectance and ΔE</li>
+                    <li><b>3:00 PM – 4:00 PM:</b> Gray balance – Neutrality / gray balance challenges (hue deficiency)</li>
+                    <li><b>4:00 PM – 5:00 PM:</b> Introduction to ICC colour management – Motivation and need for standardisation</li>
+                </ul>
+
+                <h4><b>Day 2</b></h4>
+                <ul>
+                    <li><b>10:00 AM – 11:30 AM:</b> Architecture of ICC colour management – Colour dependence and independence</li>
+                    <li><b>11:30 AM – 1:00 PM:</b> ICC colour profiles – Reference print conditions, ICC profiles, rendering intents</li>
+                    <li><b>1:00 PM – 2:00 PM:</b> Break</li>
+                    <li><b>2:00 PM – 4:00 PM:</b> Colour-managed workflows – 3Cs of ICC colour management; test charts; characterisation data; reference conditions</li>
+                    <li><b>4:00 PM – 5:00 PM:</b> Demo – Display calibration, target white point, luminance, gamma; creating and applying monitor profiles</li>
+                </ul>
+
+                <h4><b>Day 3</b></h4>
+                <ul>
+                    <li><b>10:00 AM – 11:30 AM:</b> Demo – Printing characterisation charts, measurement, generating printer ICC profiles</li>
+                    <li><b>11:30 AM – 12:30 PM:</b> Process control – Control strips, TVI, ΔE tolerances, process capability</li>
+                    <li><b>12:30 PM – 1:00 PM:</b> Demo – Process control using software</li>
+                    <li><b>1:00 PM – 2:00 PM:</b> Break</li>
+                    <li><b>2:00 PM – 4:00 PM:</b> Standards in print quality – ISO 3664, ISO 13655, ISO 12647 series, ISO/PAS 15339 CRPCs, ISO 20654</li>
+                    <li><b>4:00 PM – 4:30 PM:</b> Interactive session – Review and Q&amp;A</li>
+                    <li><b>4:30 PM – 5:00 PM:</b> Wrap-up &amp; Valedictory – Feedback and certificates</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Outcomes & Modality -->
+        <div class="row professional-activities-section">
+            <div class="col-sm-6" style="background-color:white;padding:2%;">
+                <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> Outcomes for Participants</h3>
+                <ul style="list-style-type:none; padding-left: 0;">
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Apply CIE colorimetry and spectrophotometry concepts to measure and interpret colour-based print quality metrics.
+                    </li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Select and configure appropriate measurement geometries and conditions (M0, M1, M2) for different print samples and substrates.
+                    </li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Explain and implement ICC-based colour management workflows, including profile types, reference conditions and rendering intents.
+                    </li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Calibrate and profile displays and printers, generate ICC profiles and verify them using spectral / ΔE data and soft proofing.
+                    </li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
+                        Use process control software and standards-based methods to monitor, analyse and optimise print quality in line with ISO and CRPC targets.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6" style="background-color:white;padding:2%;">
+                <h3><i class="fa fa-laptop" aria-hidden="true"></i> Modality & Registration</h3>
+                <p style="text-align: justify;">
+                    The programme will be conducted <b>online via Microsoft Teams</b>. The number of seats is
+                    limited (approximately 10) and registration will be accepted on a first-come, first-served basis.
+                    A nominal registration fee of <b>₹500 per participant</b> is proposed. Confirmed participants will
+                    receive the meeting link and instructions by e-mail.
+                </p>
+                <p>
+                    <b>Equipment / Resources used in demonstrations:</b><br>
+                    Spectrophotometer (Nix Spectro L), process control software, Datacolor SpyderX Studio
+                    profiling hardware and software.
+                </p>
+            </div>
+        </div>
+
+    </div> <!-- end container -->
+
+    <div class="footer">
+        <p>Last updated: <script>document.write(new Date(document.lastModified).toLocaleDateString());</script></p>
+        <p>All rights reserved. Regional Institute of Printing Technology, Kolkata.</p>
+    </div>
+
+    <script>
+        $('#news').load('news.html');
+    </script>
+
+</body>
+</html>
