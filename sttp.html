@@ -18,17 +18,26 @@
     <link rel="stylesheet" href="css/academicons-1.8.0/css/academicons.css">
     <link rel="stylesheet" href="css/layout.css">
 <style>
- .sttp-panel {
-  background-color: #f7f7f7;
-  padding: 15px 20px;
-  border-radius: 4px;
-  margin-top: 0;        /* was 15px */
-  margin-bottom: 15px;
-}
+  .sttp-panel {
+    background-color: #f7f7f7;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-top: 0;          /* already changed earlier */
+    margin-bottom: 15px;
+  }
 
+  /* Make the hero row look tidy */
+  .row.info {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
 
-  .sttp-panel ul.info {
-    margin-bottom: 10px;
+  /* Make the banner image fill the full column height */
+  .sttp-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* crops if needed, doesn’t distort */
+    display: block;
   }
 
   .important-dates {
@@ -40,6 +49,11 @@
 
   .important-dates ul.info {
     margin-bottom: 0;
+  }
+
+  /* Align text padding with About-section */
+  .bio-section {
+    padding: 15px 20px !important;
   }
 </style>
 
@@ -232,11 +246,11 @@
             </div>
 
             <div class="col-sm-8" style="background-color:white;padding:0px;">
-                <!-- You can replace this with your final banner image -->
-                <img class="img-responsive img-rounded image1"
-                     src="images/Screenshot_20251206-185221.png"
-                     alt="STTP Banner" width="100%">
-            </div>
+    <img class="img-responsive img-rounded sttp-banner"
+         src="images/Screenshot_20251206-185221.png"
+         alt="STTP Banner">
+</div>
+
 
         </div> <!-- /row -->
 
