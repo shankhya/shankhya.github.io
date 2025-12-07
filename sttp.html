@@ -18,6 +18,29 @@
     <link rel="stylesheet" href="css/academicons-1.8.0/css/academicons.css">
     <link rel="stylesheet" href="css/layout.css">
 <style>
+    .sttp-page-title {
+  margin-top: 70px;        /* clears the fixed navbar */
+  margin-bottom: 5px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.sttp-page-subtitle {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* you already have this – just tweak margin-top if needed */
+.row.info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-top: 10px;        /* smaller now because we have a heading above */
+  margin-bottom: 20px;
+}
+
   /* Grey card */
 .sttp-panel {
   background-color: #f7f7f7;
@@ -183,8 +206,21 @@
 
     <div class="container">
 
+        <!-- Page Title -->
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="sttp-page-title">
+              Short-Term Training Programme (STTP) on Quality Assurance and Process Control in Print Production
+            </h2>
+            <p class="sttp-page-subtitle">
+              Department of Printing Technology, Regional Institute of Printing Technology, Kolkata
+            </p>
+          </div>
+        </div>
+
         <!-- Hero / Quick Info Row -->
         <div class="row info">
+
 
             <div class="col-sm-4" style="background-color:white;">
                 
