@@ -136,7 +136,27 @@
     margin-bottom: 10px;
   }
 
-
+ .section-line-title{
+    position: relative;
+    text-align: center;
+    margin: 22px 0 18px;
+  }
+  .section-line-title:before{
+    content:"";
+    position:absolute;
+    left:0; right:0;
+    top:50%;
+    border-top:1px solid #ddd;
+    transform: translateY(-50%);
+  }
+  .section-line-title span{
+    position: relative;
+    display: inline-block;
+    background: #fff;      /* important so text sits on the line */
+    padding: 0 12px;
+    font-weight: 700;
+    color:#444;
+  }
     
 </style>
 
@@ -382,6 +402,9 @@
       facilitated discussion on applying ISO/CRPC-based standards in academic and industrial environments.
     </p>
   </div>
+</div>
+<div class="section-line-title">
+  <span><i class="fa fa-info-circle" aria-hidden="true"></i> About the Program</span>
 </div>
 
         <!-- Hero / Quick Info Row -->
