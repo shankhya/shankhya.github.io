@@ -24,6 +24,69 @@
   <link rel="stylesheet" href="../css/layout.css">
 
   <style>
+
+    /* --- Keynote Speakers --- */
+.speakers-wrap { margin-top: 6px; }
+
+.speaker-card {
+  background: #f7f7f7;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.speaker-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #e9e9e9;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* If you later replace the placeholder with an <img> */
+.speaker-photo-img{
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #dcdcdc;
+  display: block;
+}
+
+.speaker-name {
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: #222;
+}
+
+.speaker-meta {
+  margin: 0 0 6px;
+  color: #333;
+}
+
+.speaker-spec {
+  margin: 0;
+  color: #555;
+  font-size: 0.95em;
+}
+
+@media (max-width: 767px){
+  .speaker-card .media-left,
+  .speaker-card .media-body{
+    display: block;
+    width: 100%;
+  }
+  .speaker-card .media-left{ padding-right: 0; margin-bottom: 10px; }
+}
+    
     /* Prevent horizontal overflow due to Bootstrap rows */
     html, body { overflow-x: hidden; }
 
@@ -439,6 +502,92 @@
       </div>
     </div>
 
+<!-- Keynote Speakers -->
+<div class="section-line-title">
+  <span><i class="fa fa-microphone" aria-hidden="true"></i> Keynote Speakers</span>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 white-block">
+    <div class="speakers-wrap">
+
+      <!-- Speaker 1 -->
+      <div class="speaker-card media">
+        <div class="media-left">
+          <!-- Placeholder: replace this div with an <img class="speaker-photo-img" src="..."> later -->
+          <div class="speaker-photo">Speaker<br>Image</div>
+        </div>
+        <div class="media-body">
+          <h4 class="speaker-name">Dr Arpitam Chatterjee</h4>
+          <p class="speaker-meta">HoD &amp; Associate Professor, Dept. of Printing Engineering, Jadavpur University</p>
+          <p class="speaker-spec"><b>Specialization:</b> AI in digital printing</p>
+        </div>
+      </div>
+
+      <!-- Speaker 2 -->
+      <div class="speaker-card media">
+        <div class="media-left">
+          <div class="speaker-photo">Speaker<br>Image</div>
+        </div>
+        <div class="media-body">
+          <h4 class="speaker-name">Shri Pritam Ghosh</h4>
+          <p class="speaker-meta">Lecturer in Computer Science &amp; Technology, RIPT</p>
+          <p class="speaker-spec"><b>Specialization:</b> AI and IoT</p>
+        </div>
+      </div>
+
+      <!-- Speaker 3 -->
+      <div class="speaker-card media">
+        <div class="media-left">
+          <div class="speaker-photo">Speaker<br>Image</div>
+        </div>
+        <div class="media-body">
+          <h4 class="speaker-name">Shri Avijit Kar</h4>
+          <p class="speaker-meta">Senior Research Fellow, Dept. of Printing Engg., Jadavpur University</p>
+          <p class="speaker-spec"><b>Specialization:</b> Predictive maintenance</p>
+        </div>
+      </div>
+
+      <!-- Speaker 4 -->
+      <div class="speaker-card media">
+        <div class="media-left">
+          <div class="speaker-photo">Speaker<br>Image</div>
+        </div>
+        <div class="media-body">
+          <h4 class="speaker-name">Shri Parmeshwar Patidar</h4>
+          <p class="speaker-meta">CEO, Indus Analytics</p>
+          <p class="speaker-spec"><b>Specialization:</b> Information management</p>
+        </div>
+      </div>
+
+      <!-- Speaker 5 -->
+      <div class="speaker-card media">
+        <div class="media-left">
+          <div class="speaker-photo">Speaker<br>Image</div>
+        </div>
+        <div class="media-body">
+          <h4 class="speaker-name">Shri Indukalpa Saikia</h4>
+          <p class="speaker-meta">Product Specialist, Heidelberg India</p>
+          <p class="speaker-spec"><b>Specialization:</b> Print workflow</p>
+        </div>
+      </div>
+
+      <!-- Speaker 6 -->
+      <div class="speaker-card media">
+        <div class="media-left">
+          <div class="speaker-photo">Speaker<br>Image</div>
+        </div>
+        <div class="media-body">
+          <h4 class="speaker-name">Shri Das Damodaran</h4>
+          <p class="speaker-meta">Business Director, Farb Technologies</p>
+          <p class="speaker-spec"><b>Specialization:</b> Print quality assurance</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+    
     <!-- OUTCOMES + MODALITY -->
     <div class="row">
       <div class="col-sm-6 white-block">
