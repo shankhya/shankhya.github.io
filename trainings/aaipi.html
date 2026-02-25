@@ -25,6 +25,80 @@
 
   <style>
 
+    /* --- Patrons & Organizing Committee --- */
+.team-role-card{
+  border: 1px solid #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: #fff;
+}
+
+.team-role-header{
+  background: #0b2a8f;   /* deep blue */
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 12px;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+.team-role-body{
+  background: #fff6a8;   /* soft yellow */
+  padding: 14px 12px;
+}
+
+.team-person{
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.team-person:last-child{ border-bottom: none; }
+
+.team-photo{
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #e9e9e9;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.team-photo-img{
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #dcdcdc;
+  display: block;
+}
+
+.team-name{
+  margin: 0 0 4px;
+  font-weight: 700;
+  color: #111;
+}
+
+.team-meta{
+  margin: 0;
+  color: #222;
+}
+
+.team-contact{
+  margin: 6px 0 0;
+  font-size: 0.95em;
+}
+
+@media (max-width: 767px){
+  .team-role-body .media-left{ padding-right: 10px; }
+}
+
+    
     /* --- Keynote Speakers --- */
 .speakers-wrap { margin-top: 6px; }
 
@@ -631,6 +705,135 @@
 
   </div><!-- /.container -->
 
+  <!-- Patrons & Organizing Committee -->
+<div class="section-line-title">
+  <span><i class="fa fa-sitemap" aria-hidden="true"></i> Patrons &amp; Organizing Committee</span>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 white-block">
+
+    <!-- Chief Patron -->
+    <div class="team-role-card">
+      <div class="team-role-header">Chief Patron</div>
+      <div class="team-role-body">
+        <div class="team-person media">
+          <div class="media-left">
+            <!-- Placeholder image -->
+            <div class="team-photo">Image<br>Placeholder</div>
+            <!-- Replace later with:
+            <img class="team-photo-img" src="files/chief-patron.png" alt="Shri Jayanta Banerjee">
+            -->
+          </div>
+          <div class="media-body">
+            <p class="team-name">Shri Jayanta Banerjee</p>
+            <p class="team-meta">Director of Technical Education &amp; Training, Government of West Bengal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Patron -->
+    <div class="team-role-card">
+      <div class="team-role-header">Patron</div>
+      <div class="team-role-body">
+        <div class="team-person media">
+          <div class="media-left">
+            <div class="team-photo">Image<br>Placeholder</div>
+            <!-- <img class="team-photo-img" src="files/patron.png" alt="Shri Haroprosad Mondal"> -->
+          </div>
+          <div class="media-body">
+            <p class="team-name">Shri Haroprosad Mondal</p>
+            <p class="team-meta">Principal-in-Charge, Regional Institute of Printing Technology</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coordinator -->
+    <div class="team-role-card">
+      <div class="team-role-header">Coordinator</div>
+      <div class="team-role-body">
+        <div class="team-person media">
+          <div class="media-left">
+            <div class="team-photo">Image<br>Placeholder</div>
+            <!-- <img class="team-photo-img" src="files/coordinator.png" alt="Shri Shankhya Debnath"> -->
+          </div>
+          <div class="media-body">
+            <p class="team-name">Shri Shankhya Debnath</p>
+            <p class="team-meta">HoD &amp; Lecturer, Department of Printing Technology, Regional Institute of Printing Technology</p>
+            <p class="team-contact">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:shankhya@wbscte.ac.in">shankhya@wbscte.ac.in</a>
+              <br>
+              <i class="fa fa-phone" aria-hidden="true"></i> 9475227808
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Organizing Committee -->
+    <div class="team-role-card">
+      <div class="team-role-header">Organizing Committee</div>
+      <div class="team-role-body">
+
+        <div class="team-person media">
+          <div class="media-left">
+            <div class="team-photo">Image<br>Placeholder</div>
+          </div>
+          <div class="media-body">
+            <p class="team-name">Shri Partha Mandal</p>
+            <p class="team-meta">Secretary, Academic Council &amp; Lecturer in CST</p>
+          </div>
+        </div>
+
+        <div class="team-person media">
+          <div class="media-left">
+            <div class="team-photo">Image<br>Placeholder</div>
+          </div>
+          <div class="media-body">
+            <p class="team-name">Shri Pritam Ghosh</p>
+            <p class="team-meta">Lecturer in CST</p>
+          </div>
+        </div>
+
+        <div class="team-person media">
+          <div class="media-left">
+            <div class="team-photo">Image<br>Placeholder</div>
+          </div>
+          <div class="media-body">
+            <p class="team-name">Shri Soumitra Majumdar</p>
+            <p class="team-meta">Instructor in Printing Technology</p>
+          </div>
+        </div>
+
+        <div class="team-person media">
+          <div class="media-left">
+            <div class="team-photo">Image<br>Placeholder</div>
+          </div>
+          <div class="media-body">
+            <p class="team-name">Shri Ramprabesh Shaw</p>
+            <p class="team-meta">Instructor in Printing Technology</p>
+          </div>
+        </div>
+
+        <div class="team-person media">
+          <div class="media-left">
+            <div class="team-photo">Image<br>Placeholder</div>
+          </div>
+          <div class="media-body">
+            <p class="team-name">Shri Ujjal Majee</p>
+            <p class="team-meta">Instructor in Printing Technology</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+  
   <!-- FOOTER -->
   <div class="footer">
     <p>Last updated: <script>document.write(new Date(document.lastModified).toLocaleDateString());</script></p>
