@@ -1,596 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>4-Day Online Workshop on “Applications of AI in the printing industry” </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <meta name="description" content="4-Day Online Workshop on “Applications of AI in the printing industry”">
-    <meta name="keywords" content="Workshop, Quality Assurance, Print Production, Printing Technology, RIPT, AI, ML">
-    <meta name="author" content="Regional Institute of Printing Technology, Kolkata">
-    <meta name="msvalidate.01" content="DC94E1683197E154758452EFDE4EC02A" />
-    <link rel="icon" href="../images/icon.png" type="image/x-icon">
+  <title>4-Day Online Workshop on “Applications of AI in the Printing Industry”</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/academicons-1.8.0/css/academicons.css">
-    <link rel="stylesheet" href="../css/layout.css">
-<style>
-  .sttp-page-title {
-  margin-top: 70px;        /* clears the fixed navbar */
-  margin-bottom: 5px;
-  font-size: 26px;
-  font-weight: 700;
-  text-align: center;
-}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="4-Day Online Workshop on “Applications of AI in the Printing Industry”">
+  <meta name="keywords" content="Workshop, Printing Technology, RIPT, AI, ML, Quality Assurance, Print Production">
+  <meta name="author" content="Regional Institute of Printing Technology, Kolkata">
+  <meta name="msvalidate.01" content="DC94E1683197E154758452EFDE4EC02A">
+  <link rel="icon" href="../images/icon.png" type="image/x-icon">
 
-.sttp-page-subtitle {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 14px;
-  color: #555;
-  text-align: center;
-}
+  <!-- Bootstrap 3 + jQuery -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/academicons-1.8.0/css/academicons.css">
 
-/* you already have this – just tweak margin-top if needed */
-.row.info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  margin-top: 10px;        /* smaller now because we have a heading above */
-  margin-bottom: 20px;
-}
+  <!-- Your site CSS -->
+  <link rel="stylesheet" href="../css/layout.css">
 
-  /* Grey card */
-.sttp-panel {
-  background-color: #f7f7f7;
-  padding: 15px;          /* uniform padding */
-  border-radius: 4px;
-  margin-top: 0;
-  margin-bottom: 0;       /* so card bottom aligns with column bottom */
-  height: 100%;           /* fill the column height */
-}
+  <style>
+    /* Prevent horizontal overflow due to Bootstrap rows */
+    html, body { overflow-x: hidden; }
 
- /* Make the hero row flex so both columns stretch to same height */
-.row.info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+    /* Fixed navbar spacing */
+    body { padding-top: 70px; }
 
- /* Banner image should fill right column */
-.sttp-banner {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    .page-hero {
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      color: #fff;
+      padding: 22px 18px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+      text-align: center;
+      margin-bottom: 18px;
+    }
 
-/* Important dates inside the card */
-.important-dates {
-  margin-top: 10px;
-  padding-top: 8px;
-  border-top: 1px solid #ddd;
-  font-size: 0.9em;
-}
+    .page-hero h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
 
-.important-dates ul.info {
-  margin-bottom: 0;
-}
+    .page-hero .subtitle {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #e7e7e7;
+    }
 
- .bio-section {
-  padding: 15px !important;
-}
+    .fee-badges {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
+    .fee-badge {
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      display: inline-block;
+      min-width: 220px;
+    }
+    .fee-badge small {
+      display: block;
+      font-weight: 400;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    .fee-early { background: #ffd700; color: #000; }
+    .fee-late  { background: #ff5252; color: #fff; }
 
-  .section-divider {
-    margin: 18px 0 22px;
-    border-top: 1px solid #ddd;
-  }
+    .section-line-title {
+      position: relative;
+      text-align: center;
+      margin: 22px 0 18px;
+    }
+    .section-line-title:before {
+      content: "";
+      position: absolute;
+      left: 0; right: 0;
+      top: 50%;
+      border-top: 1px solid #ddd;
+      transform: translateY(-50%);
+    }
+    .section-line-title span {
+      position: relative;
+      display: inline-block;
+      background: #fff;
+      padding: 0 12px;
+      font-weight: 700;
+      color: #444;
+      font-size: 18px;
+    }
 
-  .gallery-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    margin-bottom: 12px;
-  }
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
 
-  .quote-card {
-    background: #f7f7f7;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    padding: 12px 14px;
-    margin-bottom: 12px;
-  }
+    .panel-card {
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 4px;
+      height: 100%;
+    }
 
-  .quote-card p {
-    margin-bottom: 6px;
-  }
+    ul.info {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    ul.info li { margin-bottom: 8px; }
 
-  .quote-by {
-    font-size: 12px;
-    color: #666;
-  }
+    .important-dates {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+      font-size: 0.95em;
+    }
 
-  .media-card {
-    background: #f7f7f7;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    padding: 12px;
-    margin-bottom: 12px;
-  }
+    .date-chip-early {
+      background-color: #fff3cd;
+      padding: 8px;
+      border-left: 4px solid #ffc107;
+      margin-bottom: 8px;
+    }
+    .date-chip-late {
+      background-color: #f8d7da;
+      padding: 8px;
+      border-left: 4px solid #dc3545;
+      margin-bottom: 8px;
+    }
 
-  .media-thumb {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    margin-bottom: 10px;
-  }
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+    }
 
- .section-line-title{
-    position: relative;
-    text-align: center;
-    margin: 22px 0 18px;
-  }
-  .section-line-title:before{
-    content:"";
-    position:absolute;
-    left:0; right:0;
-    top:50%;
-    border-top:1px solid #ddd;
-    transform: translateY(-50%);
-  }
-  .section-line-title span{
-    position: relative;
-    display: inline-block;
-    background: #fff;      /* important so text sits on the line */
-    padding: 0 12px;
-    font-weight: 700;
-    color:#444;
-  }
-    
-</style>
+    .white-block {
+      background: #fff;
+      padding: 2%;
+    }
 
+    .no-bullets {
+      list-style: none;
+      padding-left: 0;
+    }
+    .no-bullets li { margin-bottom: 8px; }
 
-    
-    <!---start of auth---
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js"></script>
-    <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyCAeStJWaqULRMZvJfaBaK0m4lHdCkbg1I",
-        authDomain: "githubwebpage-49237.firebaseapp.com",
-        projectId: "githubwebpage-49237",
-        storageBucket: "githubwebpage-49237.appspot.com",
-        messagingSenderId: "327422243989",
-        appId: "1:327422243989:web:0f72dc063cfa25672c579c",
-        measurementId: "G-YYE0NDK4PD"
-      };
+    /* Footer (kept simple; your layout.css may override) */
+    .footer {
+      margin-top: 18px;
+      padding: 14px 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      color: #666;
+      font-size: 13px;
+    }
+  </style>
 
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-      const auth = firebase.auth();
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6NX48XKRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z6NX48XKRL');
+  </script>
 
-      function signUp() {
-        const email = prompt("Please enter your email");
-        const password = prompt("Please enter your password");
-        auth.createUserWithEmailAndPassword(email, password)
-          .then((userCredential) => {
-            console.log("User signed up:", userCredential.user);
-          })
-          .catch((error) => {
-            console.error("Error signing up:", error);
-          });
-      }
-
-      function signIn() {
-        const email = prompt("Please enter your email");
-        const password = prompt("Please enter your password");
-        auth.signInWithEmailAndPassword(email, password)
-          .then((userCredential) => {
-            console.log("User signed in:", userCredential.user);
-            document.getElementById('sign-out').style.display = 'block';
-            document.getElementById('sign-in').style.display = 'none';
-            document.getElementById('sign-up').style.display = 'none';
-          })
-          .catch((error) => {
-            console.error("Error signing in:", error);
-          });
-      }
-
-      function signOutUser() {
-        auth.signOut().then(() => {
-          console.log("User signed out");
-          document.getElementById('sign-out').style.display = 'none';
-          document.getElementById('sign-in').style.display = 'block';
-          document.getElementById('sign-up').style.display = 'block';
-        }).catch((error) => {
-          console.error("Error signing out:", error);
-        });
-      }
-
-      auth.onAuthStateChanged((user) => {
-        if (user) {
-          console.log("User is signed in:", user);
-          document.getElementById('sign-out').style.display = 'block';
-          document.getElementById('sign-in').style.display = 'none';
-          document.getElementById('sign-up').style.display = 'none';
-        } else {
-          console.log("No user is signed in");
-          document.getElementById('sign-out').style.display = 'none';
-          document.getElementById('sign-in').style.display = 'block';
-          document.getElementById('sign-up').style.display = 'block';
-        }
-      });
-    </script>
-    <---!end of script--->
-
+  <!-- (Optional) Firebase auth code removed for cleanliness.
+       If you want it back, add it as a proper HTML comment or in a separate JS file. -->
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6NX48XKRL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Z6NX48XKRL');
-</script>
-
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <!-- Keep structure; you can add a dedicated STTP tab if you want -->
-                    <li><a href="/index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                    <li><a href="/research.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Research</a></li>
-                    <li><a href="/publications.html"><i class="fa fa-book" aria-hidden="true"></i> Publications</a></li>
-                    <li><a href="/students.html"><i class="fa fa-users" aria-hidden="true"></i> Students section</a></li>
-                    <li><a href="/resources.html"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Resources</a></li>
-                    <li><a href="/teaching.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching</a></li>
-                    <li><a href="/media.html"><i class="fa fa-television" aria-hidden="true"></i> Media</a></li>
-                    <li><a href="/musings.html"><i class="fa fa-grav" aria-hidden="true"></i> Musings</a></li>
-                    <li class="dropdown active">
-  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-    <i class="fa fa-certificate" aria-hidden="true"></i> Trainings <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
-    <li class="active"><a href="/trainings.html"><i class="fa fa-th-list"></i> All Trainings</a></li>
-    <li class="divider"></li>
-	  <li><a href="/trainings/aaipi.html"><i class="fa fa-graduation-cap"></i> Workshop: AAIPI (Apr 2026)</a></li>
-    <li><a href="/trainings/sttp.html"><i class="fa fa-graduation-cap"></i> STTP: QA &amp; Process Control (Jan 2026)</a></li>
-  </ul>
-</li>
 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
-                    
-                    <!-- Optional new menu item; uncomment if you want it in navbar
-                    <li class="active"><a href="sttp.html"><i class="fa fa-certificate" aria-hidden="true"></i> STTP</a></li>
-                    -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+          <li><a href="/research.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Research</a></li>
+          <li><a href="/publications.html"><i class="fa fa-book" aria-hidden="true"></i> Publications</a></li>
+          <li><a href="/students.html"><i class="fa fa-users" aria-hidden="true"></i> Students section</a></li>
+          <li><a href="/resources.html"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Resources</a></li>
+          <li><a href="/teaching.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching</a></li>
+          <li><a href="/media.html"><i class="fa fa-television" aria-hidden="true"></i> Media</a></li>
+          <li><a href="/musings.html"><i class="fa fa-grav" aria-hidden="true"></i> Musings</a></li>
 
-<!-- Page Title -->
-<div class="row">
-  <div class="col-sm-12">
+          <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-certificate" aria-hidden="true"></i> Trainings <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="/trainings.html"><i class="fa fa-th-list"></i> All Trainings</a></li>
+              <li class="divider"></li>
+              <li><a href="/trainings/aaipi.html"><i class="fa fa-graduation-cap"></i> Workshop: AAIPI (Apr 2026)</a></li>
+              <li><a href="/trainings/sttp.html"><i class="fa fa-graduation-cap"></i> STTP: QA &amp; Process Control (Jan 2026)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Highlight Banner -->
-    <div style="background: linear-gradient(90deg, #1e3c72, #2a5298); color:white; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.2); margin-top:70px; text-align:center;">
+  <!-- MAIN CONTENT WRAPPED IN CONTAINER (prevents wide overflow) -->
+  <div class="container">
 
-      <h2 class="sttp-page-title" style="margin:0; font-size:28px; font-weight:700; line-height:1.4;">
-        🚀 Registration is Now Open! <br>
-        4-Day Online Workshop on <br>
+    <!-- HERO / TITLE -->
+    <div class="page-hero">
+      <h1>
+        🚀 Registration is Now Open!<br>
+        4-Day Online Workshop on<br>
         <span style="color:#ffd700;">“Applications of AI in the Printing Industry”</span>
-      </h2>
+      </h1>
 
-      <p class="sttp-page-subtitle" style="margin-top:10px; font-size:16px; color:#e0e0e0;">
-        Organized by the Department of Printing Technology, <br>
+      <p class="subtitle">
+        Organized by the Department of Printing Technology,<br>
         Regional Institute of Printing Technology, Kolkata
       </p>
 
-      <!-- Centered Registration Info -->
-      <div style="margin-top:18px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-
-        <div style="background:#ffd700; color:#000; padding:10px 14px; border-radius:6px; font-weight:bold;">
-          🎯 Early Bird: INR 1500/- <br>
-          <span style="font-size:13px; font-weight:normal;">01.03.2026 – 20.03.2026</span>
+      <div class="fee-badges">
+        <div class="fee-badge fee-early">
+          🎯 Early Bird: INR 1500/-
+          <small>01.03.2026 – 20.03.2026</small>
         </div>
-
-        <div style="background:#ff5252; color:white; padding:10px 14px; border-radius:6px; font-weight:bold;">
-          ⏳ Late Registration: INR 2000/- <br>
-          <span style="font-size:13px; font-weight:normal;">21.03.2026 – 09.04.2026</span>
+        <div class="fee-badge fee-late">
+          ⏳ Late Registration: INR 2000/-
+          <small>21.03.2026 – 09.04.2026</small>
         </div>
+      </div>
+    </div>
 
+    <!-- ABOUT THE PROGRAM TITLE LINE -->
+    <div class="section-line-title">
+      <span><i class="fa fa-info-circle" aria-hidden="true"></i> About the Program</span>
+    </div>
+
+    <!-- QUICK INFO + BANNER -->
+    <div class="row info-row">
+
+      <!-- LEFT CARD -->
+      <div class="col-sm-4">
+        <div class="panel-card">
+          <ul class="info">
+            <li>
+              <span class="glyphicon glyphicon-certificate"></span>
+              <b>4-Day Online Workshop on “Applications of AI in the Printing Industry”</b>
+            </li>
+            <li>
+              <span class="glyphicon glyphicon-education"></span>
+              Organised by Department of Printing Technology, Regional Institute of Printing Technology, Kolkata
+            </li>
+            <li>
+              <span class="glyphicon glyphicon-calendar"></span>
+              <b>Dates:</b> 11.04.2026, 12.04.2026, 18.04.2026, 19.04.2026
+            </li>
+            <li>
+              <span class="glyphicon glyphicon-map-marker"></span>
+              <b>Mode:</b> Online (Microsoft Teams)
+            </li>
+            <li>
+              <span class="glyphicon glyphicon-user"></span>
+              <b>Coordinator:</b> Shankhya Debnath, HoD &amp; Lecturer, Dept. of Printing Technology
+            </li>
+            <li>
+              <span class="glyphicon glyphicon-envelope"></span>
+              <a href="mailto:shankhya@wbscte.ac.in" style="color:#000;">shankhya@wbscte.ac.in</a>
+            </li>
+            <li>
+              <span class="glyphicon glyphicon-phone-alt"></span> 033-2414-6432 (O)
+            </li>
+          </ul>
+
+          <hr style="width:80%;">
+
+          <ul class="info">
+            <li>
+              <a href="../musings/Irg/3-Day Online STTP on “Quality Assurance and Process Control in Print Produc_20251207_095055_0000.pdf" target="_blank" rel="noopener">
+                <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Brochure
+              </a>
+              <br>
+              <a href="https://forms.gle/9Vtwy2m1LLyoLzUc9" target="_blank" rel="noopener">
+                <i class="fa fa-edit" aria-hidden="true"></i> Registration Form
+              </a>
+            </li>
+          </ul>
+
+          <div class="important-dates">
+            <ul class="info">
+              <li>
+                <span class="glyphicon glyphicon-calendar"></span>
+                <b>Important Dates</b>
+              </li>
+
+              <li class="date-chip-early">
+                <b>Early-bird registration (INR 1500/-):</b> 01.03.2026 to 20.03.2026
+              </li>
+
+              <li class="date-chip-late">
+                <b>Late registration (INR 2000/-):</b> 21.03.2026 to 09.04.2026
+              </li>
+
+              <li><b>Last date for registration:</b> 09.04.2026</li>
+              <li><b>Intimation to selected participants:</b> 10.04.2026</li>
+              <li><b>Workshop dates:</b> 11.04.2026, 12.04.2026, 18.04.2026, 19.04.2026</li>
+            </ul>
+          </div>
+
+        </div>
       </div>
 
-	</div>
-  
+      <!-- RIGHT BANNER IMAGE -->
+      <div class="col-sm-8" style="padding-left:0;">
+        <img
+          class="img-responsive banner-img"
+          src="../images/Screenshot_20251206-185221.png"
+          alt="Workshop Banner: Applications of AI in the Printing Industry">
+      </div>
 
-  
+    </div>
 
-<div class="section-line-title">
-  <span style="font-size:18px;">
-    <i class="fa fa-info-circle" aria-hidden="true"></i> About the Program
-  </span>
-</div>
+    <!-- ABOUT + THRUST AREAS -->
+    <div class="row">
+      <div class="col-sm-9 white-block">
+        <h3><i class="fa fa-info-circle" aria-hidden="true"></i> About the Workshop</h3>
+        <p style="text-align: justify;">
+          This workshop offers a structured, practice-oriented introduction to the applications of Artificial Intelligence (AI)
+          in the printing industry. Over the course of the programme, participants will develop a foundational understanding
+          of AI concepts, machine learning techniques, and image processing methods, and explore their relevance across
+          print production workflows. The programme covers key application areas such as prepress automation, digital
+          printing and imaging, predictive maintenance, intelligent workflow management, and AI-driven color management.
+          Participants will also gain hands-on exposure to practical AI tools for tasks such as defect detection, process
+          optimization, and data-driven quality control. Through a balanced combination of lectures, demonstrations, and
+          interactive sessions, the programme equips industry professionals, faculty, researchers, and students with the
+          knowledge and practical skills required to integrate AI solutions into modern printing processes and research
+          environments.
+        </p>
+      </div>
 
-        <!-- Hero / Quick Info Row -->
-        <div class="row info">
+      <div class="col-sm-3 white-block">
+        <h3><i class="fa fa-bullseye" aria-hidden="true"></i> Thrust Areas</h3>
+        <ul class="no-bullets">
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI &amp; ML techniques</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in digital printing &amp; halftoning</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in predictive maintenance</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in information management</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in print workflow</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in print quality control</li>
+        </ul>
+      </div>
+    </div>
 
+    <!-- OBJECTIVES + TARGET PARTICIPANTS -->
+    <div class="row">
+      <div class="col-sm-6 white-block">
+        <h3><i class="fa fa-flag" aria-hidden="true"></i> Objectives</h3>
+        <ul class="no-bullets">
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Introduce participants to AI fundamentals relevant to printing.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Develop understanding of machine learning and image processing.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Demonstrate AI applications in digital printing and workflows.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Explore predictive maintenance and quality assurance using AI.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Enable integration of AI into research and industry practice.</li>
+        </ul>
+      </div>
 
-            <div class="col-sm-4" style="background-color:white;">
-                
-                <div class="sttp-panel">
-                    <ul class="info">
-                        <li>
-                            <span class="glyphicon glyphicon-certificate"></span>
-                            <b>4-Day Online Workshop on “Applications of AI in the printing industry”</b>
-                        </li>
-                        <li>
-                            <span class="glyphicon glyphicon-education"></span>
-                            Organised by Department of Printing Technology,
-                            Regional Institute of Printing Technology, Kolkata
-                        </li>
-                        <li>
-                            <span class="glyphicon glyphicon-calendar"></span>
-                            <b>Dates:</b> 11.04.2026, 12.04.2026, 18.04.2026, 19.04.2026
-                        </li>
-                        <li>
-                            <span class="glyphicon glyphicon-map-marker"></span>
-                            <b>Mode:</b> Online (Microsoft Teams)
-                        </li>
-                        <li>
-                            <span class="glyphicon glyphicon-user"></span>
-                            <b>Coordinator:</b> Shankhya Debnath, HoD &amp; Lecturer, Dept. of Printing Technology
-                        </li>
-                        <li>
-                            <span class="glyphicon glyphicon-envelope"></span>
-                            <a href="mailto:shankhya@wbscte.ac.in" style="color:black;">shankhya@wbscte.ac.in</a>
-                        </li>
-                        <li>
-                            <span class="glyphicon glyphicon-phone-alt"></span> 033-2414-6432 (O)
-                        </li>
-                    </ul>
+      <div class="col-sm-6 white-block">
+        <h3><i class="fa fa-users" aria-hidden="true"></i> Target Participants</h3>
+        <ul class="no-bullets">
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Senior managerial professionals in the print industry</li>
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Print production managers and supervisors</li>
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Quality assurance professionals in printing and packaging</li>
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Faculty members and researchers in Printing / Graphic / Media Technology</li>
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Diploma, Graduate and Postgraduate students and professionals seeking to upgrade skills in colour management and process control</li>
+        </ul>
+      </div>
+    </div>
 
-                    <hr style="width:80%;">
-
-                    <ul class="info">
-                        <li>
-                            <a href="../musings/Irg/3-Day Online STTP on “Quality Assurance and Process Control in Print Produc_20251207_095055_0000.pdf" target="_blank">
-                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Brochure
-                            </a><br />
-                            <a href="https://forms.gle/9Vtwy2m1LLyoLzUc9" target="_blank">
-                                <i class="fa fa-edit" aria-hidden="true"></i> Registration Form
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="important-dates">
-                        <ul class="info">
-                            <li>
-                                <span class="glyphicon glyphicon-calendar"></span>
-                                <b>Important Dates</b>
-                            </li>
-                            <li>
-                            <li style="background-color:#fff3cd; padding:8px; border-left:4px solid #ffc107; margin-bottom:6px;">
-    <b>Early-bird registration (with INR 1500/- fees):</b> 01.03.2026 to 20.03.2026
-</li>
-<li style="background-color:#f8d7da; padding:8px; border-left:4px solid #dc3545;">
-    <b>Late registration (with INR 2000/- fees):</b> 21.03.2026 to 09.04.2026
-</li>
-                            
-                            <li>
-                                <b>Last date for registration:</b> 09.04.2026
-                            </li>
-                            <li>
-                                <b>Intimation to selected participants:</b> 10.04.2026
-                            </li>
-                            <li>
-                                <b>Workshop dates:</b> 11.04.2026, 12.04.2026, 18.04.2026, 19.04.2026
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-8" style="background-color:white;padding:0px;">
-    <img class="img-responsive img-rounded sttp-banner"
-         src="../images/Screenshot_20251206-185221.png"
-         alt="STTP Banner">
-</div>
-
-
-        </div> <!-- /row -->
-
-
-        <!-- About the STTP -->
-        <div class="row">
-            <div class="col-sm-9 bio-section" style="background-color:white;padding:2%;">
-                <h3><i class="fa fa-info-circle" aria-hidden="true"></i> About the STTP</h3>
-                <p style="text-align: justify;">
-                    This workshop offers a structured, practice-oriented introduction to the applications of Artificial Intelligence (AI) in the printing industry. Over the course of the programme, participants will develop a foundational understanding of AI concepts, machine learning techniques, and image processing methods, and explore their relevance across print production workflows. The programme covers key application areas such as prepress automation, digital printing and imaging, predictive maintenance, intelligent workflow management, and AI-driven color management. Participants will also gain hands-on exposure to practical AI tools for tasks such as defect detection, process optimization, and data-driven quality control. Through a balanced combination of lectures, demonstrations, and interactive sessions, the STTP equips industry professionals, faculty, researchers, and students with the knowledge and practical skills required to integrate AI solutions into modern printing processes and research environments.
-
-                </p>
-            </div>
-
-            <div class="col-sm-3" style="background-color:white;padding:2%;">
-                <h3><i class="fa fa-bullseye" aria-hidden="true"></i> Thrust Areas</h3>
-                <ul style="list-style-type:none; padding-left: 0;">
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI &amp; ML techniques</li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in digital printing &amp; halftoning</li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in predictive maintenance</li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in Information Management</li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in Print Workflow</li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> AI in Print quality control</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Objectives & Target Audience -->
-        <div class="row professional-activities-section">
-            <div class="col-sm-6" style="background-color:white;padding:2%;">
-                <h3><i class="fa fa-flag" aria-hidden="true"></i> Objectives</h3>
-                <ul style="list-style-type:none; padding-left: 0;">
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Introduce participants to AI fundamentals relevant to printing.
-                    </li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Develop understanding of machine learning and image processing.
-                    </li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Demonstrate AI applications in digital printing and workflows.
-                    </li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Explore predictive maintenance and quality assurance using AI.
-                    </li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Enable integration of AI into research and industry practice.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-sm-6" style="background-color:white;padding:2%;">
-                <h3><i class="fa fa-users" aria-hidden="true"></i> Target Participants</h3>
-                <ul style="list-style-type:none; padding-left: 0;">
-                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Senior managerial professionals in the print industry.</li>
-                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Print production managers and supervisors</li>
-                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Quality assurance professionals in printing and packaging</li>
-                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Faculty members and researchers in Printing / Graphic / Media Technology</li>
-                    <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Diploma, Graduate and Postgraduate students and professionals seeking to upgrade skills in colour management and process control</li>
-                </ul>
-            </div>
-        </div>
-
-<!-- Programme Schedule -->
-<div class="row professional-activities-section">
-    <div class="col-sm-12" style="background-color:white;padding:2%;">
+    <!-- PROGRAMME SCHEDULE -->
+    <div class="row">
+      <div class="col-sm-12 white-block">
         <h3><i class="fa fa-calendar" aria-hidden="true"></i> Programme Schedule (4 Days)</h3>
 
         <h4><b>Day 1 – 11 April 2026</b></h4>
         <ul>
-            <li><b>10:00 AM – 10:30 AM:</b> Inauguration – Introduction to Workshop &amp; Objectives</li>
-            <li><b>10:30 AM – 11:00 AM:</b> Introduction to Artificial Intelligence &amp; Machine Learning</li>
-            <li><b>11:00 AM – 1:00 PM:</b> Fundamentals of AI – Concepts, Terminologies &amp; Applications</li>
-            <li><b>1:00 PM – 2:00 PM:</b> Break</li>
-            <li><b>2:00 PM – 4:00 PM:</b> Fundamentals of AI – Concepts, Terminologies &amp; Applications</li>
-            <li><b>4:00 PM – 5:00 PM:</b> Hands-on AI in Practice</li>
+          <li><b>10:00 AM – 10:30 AM:</b> Inauguration – Introduction to Workshop &amp; Objectives</li>
+          <li><b>10:30 AM – 11:00 AM:</b> Introduction to Artificial Intelligence &amp; Machine Learning</li>
+          <li><b>11:00 AM – 1:00 PM:</b> Fundamentals of AI – Concepts, Terminologies &amp; Applications</li>
+          <li><b>1:00 PM – 2:00 PM:</b> Break</li>
+          <li><b>2:00 PM – 4:00 PM:</b> Fundamentals of AI – Concepts, Terminologies &amp; Applications</li>
+          <li><b>4:00 PM – 5:00 PM:</b> Hands-on AI in Practice</li>
         </ul>
 
         <h4><b>Day 2 – 12 April 2026</b></h4>
         <ul>
-            <li><b>10:00 AM – 12:00 PM:</b> Hands-on AI in Practice</li>
-            <li><b>12:00 PM – 1:00 PM:</b> AI in Digital Printing &amp; Imaging</li>
-            <li><b>1:00 PM – 2:00 PM:</b> Break</li>
-            <li><b>2:00 PM – 5:00 PM:</b> AI in Digital Printing &amp; Imaging</li>
-            
+          <li><b>10:00 AM – 12:00 PM:</b> Hands-on AI in Practice</li>
+          <li><b>12:00 PM – 1:00 PM:</b> AI in Digital Printing &amp; Imaging</li>
+          <li><b>1:00 PM – 2:00 PM:</b> Break</li>
+          <li><b>2:00 PM – 5:00 PM:</b> AI in Digital Printing &amp; Imaging</li>
         </ul>
 
         <h4><b>Day 3 – 18 April 2026</b></h4>
         <ul>
-            <li><b>10:00 AM – 1:00 PM:</b> Predictive Maintenance using AI</li>
-            
-            <li><b>1:00 PM – 2:00 PM:</b> Break</li>
-            <li><b>2:00 PM – 5:00 PM:</b> Lecture &amp; demo on AI in Information Management</li>
-            
+          <li><b>10:00 AM – 1:00 PM:</b> Predictive Maintenance using AI</li>
+          <li><b>1:00 PM – 2:00 PM:</b> Break</li>
+          <li><b>2:00 PM – 5:00 PM:</b> Lecture &amp; demo on AI in Information Management</li>
         </ul>
 
         <h4><b>Day 4 – 19 April 2026</b></h4>
         <ul>
-            <li><b>10:00 AM – 1:00 PM:</b> AI in Print Workflow</li>
-            
-            <li><b>1:00 PM – 2:00 PM:</b> Break</li>
-            <li><b>2:00 PM – 3:00 PM:</b> AI in Print quality control</li>
-            <li><b>3:00 PM – 4:00 PM:</b> Interactive Session – Discussion &amp; Q&amp;A</li>
-            <li><b>4:00 PM – 5:00 PM:</b> Valedictory Session – Feedback &amp; Certificates</li>
+          <li><b>10:00 AM – 1:00 PM:</b> AI in Print Workflow</li>
+          <li><b>1:00 PM – 2:00 PM:</b> Break</li>
+          <li><b>2:00 PM – 3:00 PM:</b> AI in Print Quality Control</li>
+          <li><b>3:00 PM – 4:00 PM:</b> Interactive Session – Discussion &amp; Q&amp;A</li>
+          <li><b>4:00 PM – 5:00 PM:</b> Valedictory Session – Feedback &amp; Certificates</li>
         </ul>
-    </div>
-</div>
-
-        <!-- Outcomes & Modality -->
-        <div class="row professional-activities-section">
-            <div class="col-sm-6" style="background-color:white;padding:2%;">
-                <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> Outcomes for Participants</h3>
-                <ul style="list-style-type:none; padding-left: 0;">
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Explain basic AI concepts relevant to printing technology.
-                    </li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Apply AI methods for image analysis, defect detection, and workflow improvement.
-                    </li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Demonstrate the use of AI in digital printing and automated workflows.
-                    </li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Analyze print data to support maintenance and operational decisions.
-                    </li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Assess AI-based approaches for color management and print quality control.
-                    </li>
-                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        Develop simple AI-enabled solutions for academic or industry applications in printing.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-sm-6" style="background-color:white;padding:2%;">
-    <h3><i class="fa fa-laptop" aria-hidden="true"></i> Modality & Registration</h3>
-    <p style="text-align: justify;">
-        The programme will be conducted <b>online via Microsoft Teams</b>. The number of seats is
-        limited and registration will be accepted on a first-come, first-served basis.
-        An early-bird registration fee (01.03.2026 to 20.03.2026) of <b>₹1500 per participant</b> and late registration fee (21.03.2026 to 09.04.2026) of <b>₹2000 per participant</b> is to be paid through online bank transfer
-        to the following account:
-    </p>
-
-    <ul style="list-style-type:none; padding-left: 0;">
-        <li><b>Bank:</b> State Bank of India</li>
-        <li><b>Branch:</b> Jodhpur Park Branch</li>
-        <li><b>A/C holder name:</b> Regional Institute of Printing Technology</li>
-        <li><b>A/C no.:</b> 41614243034</li>
-        <li><b>IFSC:</b> SBIN0011539</li>
-        <li><b>MICR:</b> 700002334</li>
-    </ul>
-
-    <p style="text-align: justify;">
-        Confirmed participants will receive the meeting link and further instructions by e-mail.
-    </p>
-
-
-</div>
-
-        </div>
-
-
-        
-    </div> <!-- end container -->
-
-    <div class="footer">
-        <p>Last updated: <script>document.write(new Date(document.lastModified).toLocaleDateString());</script></p>
-        <p>All rights reserved. Shankhya Debnath. 2026.</p>
+      </div>
     </div>
 
-    <script>
-        $('#news').load('news.html');
-    </script>
+    <!-- OUTCOMES + MODALITY -->
+    <div class="row">
+      <div class="col-sm-6 white-block">
+        <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> Outcomes for Participants</h3>
+        <ul class="no-bullets">
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Explain basic AI concepts relevant to printing technology.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Apply AI methods for image analysis, defect detection, and workflow improvement.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Demonstrate the use of AI in digital printing and automated workflows.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Analyze print data to support maintenance and operational decisions.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Assess AI-based approaches for color management and print quality control.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Develop simple AI-enabled solutions for academic or industry applications in printing.</li>
+        </ul>
+      </div>
 
+      <div class="col-sm-6 white-block">
+        <h3><i class="fa fa-laptop" aria-hidden="true"></i> Modality &amp; Registration</h3>
+        <p style="text-align: justify;">
+          The programme will be conducted <b>online via Microsoft Teams</b>. The number of seats is limited and registration
+          will be accepted on a first-come, first-served basis. An early-bird registration fee (01.03.2026 to 20.03.2026) of
+          <b>₹1500 per participant</b> and a late registration fee (21.03.2026 to 09.04.2026) of
+          <b>₹2000 per participant</b> is to be paid through online bank transfer to the following account:
+        </p>
+
+        <ul class="no-bullets">
+          <li><b>Bank:</b> State Bank of India</li>
+          <li><b>Branch:</b> Jodhpur Park Branch</li>
+          <li><b>A/C holder name:</b> Regional Institute of Printing Technology</li>
+          <li><b>A/C no.:</b> 41614243034</li>
+          <li><b>IFSC:</b> SBIN0011539</li>
+          <li><b>MICR:</b> 700002334</li>
+        </ul>
+
+        <p style="text-align: justify;">
+          Confirmed participants will receive the meeting link and further instructions by e-mail.
+        </p>
+      </div>
+    </div>
+
+    <!-- Optional news placeholder if you really want $('#news').load(...) -->
+    <div id="news" style="margin-top:10px;"></div>
+
+  </div><!-- /.container -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Last updated: <script>document.write(new Date(document.lastModified).toLocaleDateString());</script></p>
+    <p>All rights reserved. Shankhya Debnath. 2026.</p>
+  </div>
+
+  <script>
+    // If you have news.html in same folder context, keep this. Otherwise remove.
+    $('#news').load('news.html');
+  </script>
 </body>
 </html>
