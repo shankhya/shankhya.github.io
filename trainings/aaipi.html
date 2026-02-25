@@ -24,143 +24,6 @@
   <link rel="stylesheet" href="../css/layout.css">
 
   <style>
-
-    /* --- Patrons & Organizing Committee --- */
-.team-role-card{
-  border: 1px solid #eee;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 14px;
-  background: #fff;
-}
-
-.team-role-header{
-  background: #0b2a8f;   /* deep blue */
-  color: #fff;
-  font-weight: 700;
-  padding: 10px 12px;
-  text-align: center;
-  letter-spacing: 0.2px;
-}
-
-.team-role-body{
-  background: #fff6a8;   /* soft yellow */
-  padding: 14px 12px;
-}
-
-.team-person{
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-.team-person:last-child{ border-bottom: none; }
-
-.team-photo{
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background: #e9e9e9;
-  border: 1px solid #dcdcdc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
-  font-size: 11px;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.team-photo-img{
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #dcdcdc;
-  display: block;
-}
-
-.team-name{
-  margin: 0 0 4px;
-  font-weight: 700;
-  color: #111;
-}
-
-.team-meta{
-  margin: 0;
-  color: #222;
-}
-
-.team-contact{
-  margin: 6px 0 0;
-  font-size: 0.95em;
-}
-
-@media (max-width: 767px){
-  .team-role-body .media-left{ padding-right: 10px; }
-}
-
-    
-    /* --- Keynote Speakers --- */
-.speakers-wrap { margin-top: 6px; }
-
-.speaker-card {
-  background: #f7f7f7;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  padding: 14px;
-  margin-bottom: 12px;
-}
-
-.speaker-photo {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background: #e9e9e9;
-  border: 1px solid #dcdcdc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
-  font-size: 12px;
-  text-align: center;
-  line-height: 1.2;
-}
-
-/* If you later replace the placeholder with an <img> */
-.speaker-photo-img{
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #dcdcdc;
-  display: block;
-}
-
-.speaker-name {
-  margin: 0 0 6px;
-  font-weight: 700;
-  color: #222;
-}
-
-.speaker-meta {
-  margin: 0 0 6px;
-  color: #333;
-}
-
-.speaker-spec {
-  margin: 0;
-  color: #555;
-  font-size: 0.95em;
-}
-
-@media (max-width: 767px){
-  .speaker-card .media-left,
-  .speaker-card .media-body{
-    display: block;
-    width: 100%;
-  }
-  .speaker-card .media-left{ padding-right: 0; margin-bottom: 10px; }
-}
-    
     /* Prevent horizontal overflow due to Bootstrap rows */
     html, body { overflow-x: hidden; }
 
@@ -205,12 +68,14 @@
       display: inline-block;
       min-width: 220px;
     }
+
     .fee-badge small {
       display: block;
       font-weight: 400;
       font-size: 13px;
       margin-top: 2px;
     }
+
     .fee-early { background: #ffd700; color: #000; }
     .fee-late  { background: #ff5252; color: #fff; }
 
@@ -237,6 +102,7 @@
       font-size: 18px;
     }
 
+    /* Hero info row: equal height columns */
     .info-row {
       display: flex;
       flex-wrap: wrap;
@@ -244,6 +110,8 @@
       margin-top: 10px;
       margin-bottom: 20px;
     }
+    /* Make columns behave as flex items cleanly */
+    .info-row > [class*="col-"] { float: none; }
 
     .panel-card {
       background-color: #f7f7f7;
@@ -298,7 +166,122 @@
     }
     .no-bullets li { margin-bottom: 8px; }
 
-    /* Footer (kept simple; your layout.css may override) */
+    /* --- Keynote Speakers --- */
+    .speakers-wrap { margin-top: 6px; }
+
+    .speaker-card {
+      background: #f7f7f7;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .speaker-photo-img{
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #dcdcdc;
+      display: block;
+    }
+
+    .speaker-name {
+      margin: 0 0 6px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .speaker-meta {
+      margin: 0 0 6px;
+      color: #333;
+    }
+
+    .speaker-spec {
+      margin: 0;
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 767px){
+      .speaker-card .media-left,
+      .speaker-card .media-body{
+        display: block;
+        width: 100%;
+      }
+      .speaker-card .media-left{ padding-right: 0; margin-bottom: 10px; }
+    }
+
+    /* --- Patrons & Organizing Committee --- */
+    .team-role-card{
+      border: 1px solid #eee;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 14px;
+      background: #fff;
+    }
+
+    .team-role-header{
+      background: #0b2a8f;
+      color: #fff;
+      font-weight: 700;
+      padding: 10px 12px;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    .team-role-body{
+      background: #fff6a8;
+      padding: 14px 12px;
+    }
+
+    .team-person{
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .team-person:last-child{ border-bottom: none; }
+
+    .team-photo{
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: #e9e9e9;
+      border: 1px solid #dcdcdc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .team-photo-img{
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #dcdcdc;
+      display: block;
+    }
+
+    .team-name{
+      margin: 0 0 4px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .team-meta{
+      margin: 0;
+      color: #222;
+    }
+
+    .team-contact{
+      margin: 6px 0 0;
+      font-size: 0.95em;
+    }
+
+    /* Footer */
     .footer {
       margin-top: 18px;
       padding: 14px 0;
@@ -317,9 +300,6 @@
     gtag('js', new Date());
     gtag('config', 'G-Z6NX48XKRL');
   </script>
-
-  <!-- (Optional) Firebase auth code removed for cleanliness.
-       If you want it back, add it as a proper HTML comment or in a separate JS file. -->
 </head>
 
 <body>
@@ -362,10 +342,10 @@
     </div>
   </nav>
 
-  <!-- MAIN CONTENT WRAPPED IN CONTAINER (prevents wide overflow) -->
+  <!-- MAIN CONTENT -->
   <div class="container">
 
-    <!-- HERO / TITLE -->
+    <!-- HERO -->
     <div class="page-hero">
       <h1>
         🚀 Registration is Now Open!<br>
@@ -390,7 +370,7 @@
       </div>
     </div>
 
-    <!-- ABOUT THE PROGRAM TITLE LINE -->
+    <!-- ABOUT THE PROGRAM -->
     <div class="section-line-title">
       <span><i class="fa fa-info-circle" aria-hidden="true"></i> About the Program</span>
     </div>
@@ -398,7 +378,6 @@
     <!-- QUICK INFO + BANNER -->
     <div class="row info-row">
 
-      <!-- LEFT CARD -->
       <div class="col-sm-4">
         <div class="panel-card">
           <ul class="info">
@@ -465,16 +444,13 @@
               <li><b>Workshop dates:</b> 11.04.2026, 12.04.2026, 18.04.2026, 19.04.2026</li>
             </ul>
           </div>
-
         </div>
       </div>
 
-      <!-- RIGHT BANNER IMAGE -->
       <div class="col-sm-8" style="padding-left:0;">
-        <img
-          class="img-responsive banner-img"
-          src="../images/Screenshot_20251206-185221.png"
-          alt="Workshop Banner: Applications of AI in the Printing Industry">
+        <img class="img-responsive banner-img"
+             src="../images/Screenshot_20251206-185221.png"
+             alt="Workshop Banner: Applications of AI in the Printing Industry">
       </div>
 
     </div>
@@ -510,7 +486,7 @@
       </div>
     </div>
 
-    <!-- OBJECTIVES + TARGET PARTICIPANTS -->
+    <!-- OBJECTIVES + TARGET -->
     <div class="row">
       <div class="col-sm-6 white-block">
         <h3><i class="fa fa-flag" aria-hidden="true"></i> Objectives</h3>
@@ -576,92 +552,85 @@
       </div>
     </div>
 
-<!-- Keynote Speakers -->
-<div class="section-line-title">
-  <span><i class="fa fa-microphone" aria-hidden="true"></i> Keynote Speakers</span>
-</div>
-
-<div class="row">
-  <div class="col-sm-12 white-block">
-    <div class="speakers-wrap">
-
-      <!-- Speaker 1 -->
-      <div class="speaker-card media">
-        <div class="media-left">
-          <!-- Placeholder: replace this div with an <img class="speaker-photo-img" src="..."> later -->
-          <img class="speaker-photo-img" src="files/ac.png" alt="Dr Arpitam Chatterjee">
-        </div>
-        <div class="media-body">
-          <h4 class="speaker-name">Dr Arpitam Chatterjee</h4>
-          <p class="speaker-meta">HoD &amp; Associate Professor, Dept. of Printing Engineering, Jadavpur University</p>
-          <p class="speaker-spec"><b>Specialization:</b> AI in digital printing</p>
-        </div>
-      </div>
-
-      <!-- Speaker 2 -->
-      <div class="speaker-card media">
-        <div class="media-left">
-          <img class="speaker-photo-img" src="files/pg.png" alt="Shri Pritam Ghosh">
-        </div>
-        <div class="media-body">
-          <h4 class="speaker-name">Shri Pritam Ghosh</h4>
-          <p class="speaker-meta">Lecturer in Computer Science &amp; Technology, RIPT</p>
-          <p class="speaker-spec"><b>Specialization:</b> AI and IoT</p>
-        </div>
-      </div>
-
-      <!-- Speaker 3 -->
-      <div class="speaker-card media">
-        <div class="media-left">
-          <img class="speaker-photo-img" src="files/ak.png" alt="Shri Avijit Kar">
-        </div>
-        <div class="media-body">
-          <h4 class="speaker-name">Shri Avijit Kar</h4>
-          <p class="speaker-meta">Senior Research Fellow, Dept. of Printing Engg., Jadavpur University</p>
-          <p class="speaker-spec"><b>Specialization:</b> Predictive maintenance</p>
-        </div>
-      </div>
-
-      <!-- Speaker 4 -->
-      <div class="speaker-card media">
-        <div class="media-left">
-         <img class="speaker-photo-img" src="files/pp.png" alt="Shri Parmeshwar Patidar">
-        </div>
-        <div class="media-body">
-          <h4 class="speaker-name">Shri Parmeshwar Patidar</h4>
-          <p class="speaker-meta">CEO, Indus Analytics</p>
-          <p class="speaker-spec"><b>Specialization:</b> Information management</p>
-        </div>
-      </div>
-
-      <!-- Speaker 5 -->
-      <div class="speaker-card media">
-        <div class="media-left">
-         <img class="speaker-photo-img" src="files/is.png" alt="Shri Indukalpa Saikia">
-        </div>
-        <div class="media-body">
-          <h4 class="speaker-name">Shri Indukalpa Saikia</h4>
-          <p class="speaker-meta">Product Specialist, Heidelberg India</p>
-          <p class="speaker-spec"><b>Specialization:</b> Print workflow</p>
-        </div>
-      </div>
-
-      <!-- Speaker 6 -->
-      <div class="speaker-card media">
-        <div class="media-left">
-         <img class="speaker-photo-img" src="files/dd.png" alt="Shri Das Damodaran">
-        </div>
-        <div class="media-body">
-          <h4 class="speaker-name">Shri Das Damodaran</h4>
-          <p class="speaker-meta">Business Director, Farb Technologies</p>
-          <p class="speaker-spec"><b>Specialization:</b> Print quality assurance</p>
-        </div>
-      </div>
-
+    <!-- KEYNOTE SPEAKERS -->
+    <div class="section-line-title">
+      <span><i class="fa fa-microphone" aria-hidden="true"></i> Keynote Speakers</span>
     </div>
-  </div>
-</div>
-    
+
+    <div class="row">
+      <div class="col-sm-12 white-block">
+        <div class="speakers-wrap">
+
+          <div class="speaker-card media">
+            <div class="media-left">
+              <img class="speaker-photo-img" src="files/ac.png" alt="Dr Arpitam Chatterjee">
+            </div>
+            <div class="media-body">
+              <h4 class="speaker-name">Dr Arpitam Chatterjee</h4>
+              <p class="speaker-meta">HoD &amp; Associate Professor, Dept. of Printing Engineering, Jadavpur University</p>
+              <p class="speaker-spec"><b>Specialization:</b> AI in digital printing</p>
+            </div>
+          </div>
+
+          <div class="speaker-card media">
+            <div class="media-left">
+              <img class="speaker-photo-img" src="files/pg.png" alt="Shri Pritam Ghosh">
+            </div>
+            <div class="media-body">
+              <h4 class="speaker-name">Shri Pritam Ghosh</h4>
+              <p class="speaker-meta">Lecturer in Computer Science &amp; Technology, RIPT</p>
+              <p class="speaker-spec"><b>Specialization:</b> AI and IoT</p>
+            </div>
+          </div>
+
+          <div class="speaker-card media">
+            <div class="media-left">
+              <img class="speaker-photo-img" src="files/ak.png" alt="Shri Avijit Kar">
+            </div>
+            <div class="media-body">
+              <h4 class="speaker-name">Shri Avijit Kar</h4>
+              <p class="speaker-meta">Senior Research Fellow, Dept. of Printing Engg., Jadavpur University</p>
+              <p class="speaker-spec"><b>Specialization:</b> Predictive maintenance</p>
+            </div>
+          </div>
+
+          <div class="speaker-card media">
+            <div class="media-left">
+              <img class="speaker-photo-img" src="files/pp.png" alt="Shri Parmeshwar Patidar">
+            </div>
+            <div class="media-body">
+              <h4 class="speaker-name">Shri Parmeshwar Patidar</h4>
+              <p class="speaker-meta">CEO, Indus Analytics</p>
+              <p class="speaker-spec"><b>Specialization:</b> Information management</p>
+            </div>
+          </div>
+
+          <div class="speaker-card media">
+            <div class="media-left">
+              <img class="speaker-photo-img" src="files/is.png" alt="Shri Indukalpa Saikia">
+            </div>
+            <div class="media-body">
+              <h4 class="speaker-name">Shri Indukalpa Saikia</h4>
+              <p class="speaker-meta">Product Specialist, Heidelberg India</p>
+              <p class="speaker-spec"><b>Specialization:</b> Print workflow</p>
+            </div>
+          </div>
+
+          <div class="speaker-card media">
+            <div class="media-left">
+              <img class="speaker-photo-img" src="files/dd.png" alt="Shri Das Damodaran">
+            </div>
+            <div class="media-body">
+              <h4 class="speaker-name">Shri Das Damodaran</h4>
+              <p class="speaker-meta">Business Director, Farb Technologies</p>
+              <p class="speaker-spec"><b>Specialization:</b> Print quality assurance</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <!-- OUTCOMES + MODALITY -->
     <div class="row">
       <div class="col-sm-6 white-block">
@@ -700,140 +669,146 @@
       </div>
     </div>
 
-    <!-- Optional news placeholder if you really want $('#news').load(...) -->
+    <!-- NEWS placeholder -->
     <div id="news" style="margin-top:10px;"></div>
+
+    <!-- PATRONS & COMMITTEE (INSIDE CONTAINER to prevent overflow) -->
+    <div class="section-line-title">
+      <span><i class="fa fa-sitemap" aria-hidden="true"></i> Patrons &amp; Organizing Committee</span>
+    </div>
+
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="team-role-card">
+          <div class="team-role-header">Chief Patron</div>
+          <div class="team-role-body">
+            <div class="team-person media">
+              <div class="media-left">
+                <div class="team-photo">Photo</div>
+                <!-- Replace later:
+                <img class="team-photo-img" src="files/jb.png" alt="Shri Jayanta Banerjee">
+                -->
+              </div>
+              <div class="media-body">
+                <p class="team-name">Shri Jayanta Banerjee</p>
+                <p class="team-meta">Director of Technical Education &amp; Training, Government of West Bengal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="team-role-card">
+          <div class="team-role-header">Patron</div>
+          <div class="team-role-body">
+            <div class="team-person media">
+              <div class="media-left">
+                <div class="team-photo">Photo</div>
+                <!-- Replace later:
+                <img class="team-photo-img" src="files/hm.png" alt="Shri Haroprosad Mondal">
+                -->
+              </div>
+              <div class="media-body">
+                <p class="team-name">Shri Haroprosad Mondal</p>
+                <p class="team-meta">Principal-in-Charge, Regional Institute of Printing Technology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="team-role-card">
+          <div class="team-role-header">Coordinator</div>
+          <div class="team-role-body">
+            <div class="team-person media">
+              <div class="media-left">
+                <div class="team-photo">Photo</div>
+                <!-- Replace later:
+                <img class="team-photo-img" src="files/sd.png" alt="Shri Shankhya Debnath">
+                -->
+              </div>
+              <div class="media-body">
+                <p class="team-name">Shri Shankhya Debnath</p>
+                <p class="team-meta">HoD &amp; Lecturer, Department of Printing Technology, Regional Institute of Printing Technology</p>
+                <p class="team-contact">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <a href="mailto:shankhya@wbscte.ac.in">shankhya@wbscte.ac.in</a><br>
+                  <i class="fa fa-phone" aria-hidden="true"></i> 9475227808
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="team-role-card">
+          <div class="team-role-header">Organizing Committee</div>
+          <div class="team-role-body">
+
+            <div class="team-person media">
+              <div class="media-left">
+                <div class="team-photo">Photo</div>
+              </div>
+              <div class="media-body">
+                <p class="team-name">Shri Partha Mandal</p>
+                <p class="team-meta">Secretary, Academic Council &amp; Lecturer in CST</p>
+              </div>
+            </div>
+
+            <div class="team-person media">
+              <div class="media-left">
+                <div class="team-photo">Photo</div>
+              </div>
+              <div class="media-body">
+                <p class="team-name">Shri Pritam Ghosh</p>
+                <p class="team-meta">Lecturer in CST</p>
+              </div>
+            </div>
+
+            <div class="team-person media">
+              <div class="media-left">
+                <div class="team-photo">Photo</div>
+              </div>
+              <div class="media-body">
+                <p class="team-name">Shri Soumitra Majumdar</p>
+                <p class="team-meta">Instructor in Printing Technology</p>
+              </div>
+            </div>
+
+            <div class="team-person media">
+              <div class="media-left">
+                <div class="team-photo">Photo</div>
+              </div>
+              <div class="media-body">
+                <p class="team-name">Shri Ramprabesh Shaw</p>
+                <p class="team-meta">Instructor in Printing Technology</p>
+              </div>
+            </div>
+
+            <div class="team-person media">
+              <div class="media-left">
+                <div class="team-photo">Photo</div>
+              </div>
+              <div class="media-body">
+                <p class="team-name">Shri Ujjal Majee</p>
+                <p class="team-meta">Instructor in Printing Technology</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div><!-- /.container -->
 
-  <!-- Patrons & Organizing Committee -->
-<div class="section-line-title">
-  <span><i class="fa fa-sitemap" aria-hidden="true"></i> Patrons &amp; Organizing Committee</span>
-</div>
-
-<div class="row">
-  <div class="col-sm-12 white-block">
-
-    <!-- Chief Patron -->
-    <div class="team-role-card">
-      <div class="team-role-header">Chief Patron</div>
-      <div class="team-role-body">
-        <div class="team-person media">
-          <div class="media-left">
-            <!-- Placeholder image -->
-            <div class="team-photo">Image<br>Placeholder</div>
-            <!-- Replace later with:
-            <img class="team-photo-img" src="files/chief-patron.png" alt="Shri Jayanta Banerjee">
-            -->
-          </div>
-          <div class="media-body">
-            <p class="team-name">Shri Jayanta Banerjee</p>
-            <p class="team-meta">Director of Technical Education &amp; Training, Government of West Bengal</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Patron -->
-    <div class="team-role-card">
-      <div class="team-role-header">Patron</div>
-      <div class="team-role-body">
-        <div class="team-person media">
-          <div class="media-left">
-            <div class="team-photo">Image<br>Placeholder</div>
-            <!-- <img class="team-photo-img" src="files/patron.png" alt="Shri Haroprosad Mondal"> -->
-          </div>
-          <div class="media-body">
-            <p class="team-name">Shri Haroprosad Mondal</p>
-            <p class="team-meta">Principal-in-Charge, Regional Institute of Printing Technology</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Coordinator -->
-    <div class="team-role-card">
-      <div class="team-role-header">Coordinator</div>
-      <div class="team-role-body">
-        <div class="team-person media">
-          <div class="media-left">
-            <div class="team-photo">Image<br>Placeholder</div>
-            <!-- <img class="team-photo-img" src="files/coordinator.png" alt="Shri Shankhya Debnath"> -->
-          </div>
-          <div class="media-body">
-            <p class="team-name">Shri Shankhya Debnath</p>
-            <p class="team-meta">HoD &amp; Lecturer, Department of Printing Technology, Regional Institute of Printing Technology</p>
-            <p class="team-contact">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <a href="mailto:shankhya@wbscte.ac.in">shankhya@wbscte.ac.in</a>
-              <br>
-              <i class="fa fa-phone" aria-hidden="true"></i> 9475227808
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Organizing Committee -->
-    <div class="team-role-card">
-      <div class="team-role-header">Organizing Committee</div>
-      <div class="team-role-body">
-
-        <div class="team-person media">
-          <div class="media-left">
-            <div class="team-photo">Image<br>Placeholder</div>
-          </div>
-          <div class="media-body">
-            <p class="team-name">Shri Partha Mandal</p>
-            <p class="team-meta">Secretary, Academic Council &amp; Lecturer in CST</p>
-          </div>
-        </div>
-
-        <div class="team-person media">
-          <div class="media-left">
-            <div class="team-photo">Image<br>Placeholder</div>
-          </div>
-          <div class="media-body">
-            <p class="team-name">Shri Pritam Ghosh</p>
-            <p class="team-meta">Lecturer in CST</p>
-          </div>
-        </div>
-
-        <div class="team-person media">
-          <div class="media-left">
-            <div class="team-photo">Image<br>Placeholder</div>
-          </div>
-          <div class="media-body">
-            <p class="team-name">Shri Soumitra Majumdar</p>
-            <p class="team-meta">Instructor in Printing Technology</p>
-          </div>
-        </div>
-
-        <div class="team-person media">
-          <div class="media-left">
-            <div class="team-photo">Image<br>Placeholder</div>
-          </div>
-          <div class="media-body">
-            <p class="team-name">Shri Ramprabesh Shaw</p>
-            <p class="team-meta">Instructor in Printing Technology</p>
-          </div>
-        </div>
-
-        <div class="team-person media">
-          <div class="media-left">
-            <div class="team-photo">Image<br>Placeholder</div>
-          </div>
-          <div class="media-body">
-            <p class="team-name">Shri Ujjal Majee</p>
-            <p class="team-meta">Instructor in Printing Technology</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</div>
-  
   <!-- FOOTER -->
   <div class="footer">
     <p>Last updated: <script>document.write(new Date(document.lastModified).toLocaleDateString());</script></p>
@@ -841,8 +816,8 @@
   </div>
 
   <script>
-    // If you have news.html in same folder context, keep this. Otherwise remove.
     $('#news').load('news.html');
   </script>
+
 </body>
 </html>
