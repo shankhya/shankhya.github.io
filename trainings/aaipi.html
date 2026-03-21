@@ -229,6 +229,22 @@
       border: 1px solid #dcdcdc;
       display: block;
     }
+    .fee-early.expired {
+  opacity: 0.6;
+  position: relative;
+  text-decoration: line-through;
+}
+
+.badge-expired {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 8px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #d9534f;
+  border-radius: 4px;
+  text-decoration: none; /* prevents strike-through on label */
+}
 
     .speaker-name {
       margin: 0 0 6px;
@@ -419,10 +435,12 @@ target="_blank"
 </div>
 
       <div class="fee-badges">
-        <div class="fee-badge fee-early">
-          🎯 Early Bird Registration: INR 1500/-
-          <small>01.03.2026 – 20.03.2026</small>
-        </div>
+  <div class="fee-badge fee-early expired">
+    🎯 Early Bird Registration: INR 1500/-
+    <small>01.03.2026 – 20.03.2026</small>
+    <span class="badge-expired">Expired</span>
+  </div>
+
         <div class="fee-badge fee-late">
           ⏳ Late Registration: INR 2000/-
           <small>21.03.2026 – 09.04.2026</small>
