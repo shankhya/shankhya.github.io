@@ -250,7 +250,8 @@
       border: 1px solid #dcdcdc;
       display: block;
     }
-    .fee-early.expired {
+    .fee-early.expired,
+.fee-late.expired {
   opacity: 0.6;
   position: relative;
   text-decoration: line-through;
@@ -468,10 +469,11 @@ target="_blank"
     <span class="badge-expired">Expired</span>
   </div>
 
-        <div class="fee-badge fee-late">
-          ⏳ Late Registration: INR 2000/-
-          <small>21.03.2026 – 09.04.2026</small>
-        </div>
+        <div class="fee-badge fee-late expired">
+  ⏳ Late Registration: INR 2000/-
+  <small>21.03.2026 – 09.04.2026</small>
+  <span class="badge-expired">Expired</span>
+</div>
       </div>
     </div>
 
