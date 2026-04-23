@@ -24,7 +24,38 @@
   <link rel="stylesheet" href="../css/layout.css">
 
   <style>
-    /* HERO CTA BUTTONS */
+    
+    
+.section-divider {
+  margin: 18px 0 22px;
+  border-top: 1px solid #ddd;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  margin-bottom: 12px;
+}
+
+.quote-card {
+  background: #f7f7f7;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.quote-card p {
+  margin-bottom: 6px;
+}
+
+.quote-by {
+  font-size: 12px;
+  color: #666;
+}
 .hero-cta {
   margin-top: 16px;
   display: flex;
@@ -64,7 +95,29 @@
 }
     @keyframes pulseGlow {
   0% { box-shadow: 0 0 0 rgba(255, 215, 0, 0.6); }
-  50% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.9); }
+  50% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.9); 
+    .page-hero h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .page-hero .subtitle {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #e7e7e7;
+    }
+
+    .fee-badges {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .fee-badge}
   100% { box-shadow: 0 0 0 rgba(255, 215, 0, 0.6); }
 }
 
@@ -89,29 +142,7 @@
       text-align: center;
       margin-bottom: 18px;
     }
-
-    .page-hero h1 {
-      margin: 0;
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .page-hero .subtitle {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #e7e7e7;
-    }
-
-    .fee-badges {
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .fee-badge {
+     {
       padding: 10px 14px;
       border-radius: 6px;
       font-weight: 700;
@@ -477,8 +508,73 @@ target="_blank"
       </div>
     </div>
 
+    <!-- ADD THIS BLOCK RIGHT AFTER THE HERO BLOCK, BEFORE <!-- MEDIA COVERAGE (TOP) --> -->
+
+<div class="row" style="margin-bottom: 18px;">
+  <div class="col-sm-12 white-block">
+    <h3><i class="fa fa-camera" aria-hidden="true"></i> Post-Training Highlights</h3>
+    <p style="color:#555; margin-bottom:18px;">
+      Glimpses from the workshop, participant feedback, and a brief report of the programme.
+    </p>
+
+    <!-- 1) Training Photos -->
+    <h4 style="font-weight:700; margin-top:0;">
+      <i class="fa fa-image" aria-hidden="true"></i> Workshop Photos
+    </h4>
+    <div class="row">
+      <div class="col-sm-4">
+        <img class="gallery-img" src="files/aaipi-photo1.jpg" alt="AAIPI Workshop Photo 1">
+      </div>
+      <div class="col-sm-4">
+        <img class="gallery-img" src="files/aaipi-photo2.jpg" alt="AAIPI Workshop Photo 2">
+      </div>
+      <div class="col-sm-4">
+        <img class="gallery-img" src="files/aaipi-photo3.jpg" alt="AAIPI Workshop Photo 3">
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- 2) Participant Feedback -->
+    <h4 style="font-weight:700;">
+      <i class="fa fa-comments" aria-hidden="true"></i> Participant Feedback
+    </h4>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="quote-card">
+          <p>“The workshop was highly informative and helped me understand how AI can be applied practically in print production and quality control.”</p>
+          <div class="quote-by">– Participant Feedback 1</div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="quote-card">
+          <p>“The sessions were well structured, relevant to industry, and very useful for faculty, students, and professionals interested in AI in printing.”</p>
+          <div class="quote-by">– Participant Feedback 2</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- 3) Brief Report -->
+    <h4 style="font-weight:700;">
+      <i class="fa fa-file-text-o" aria-hidden="true"></i> Brief Report
+    </h4>
+    <p style="text-align:justify; margin-bottom:0;">
+      The 4-day online workshop on <b>“Applications of AI in the Printing Industry (AAIPI)”</b> was conducted on
+      <b>11 April 2026, 12 April 2026, 18 April 2026, and 19 April 2026</b> via <b>Microsoft Teams</b>.
+      The programme introduced participants to the fundamentals of Artificial Intelligence and Machine Learning,
+      along with their practical relevance in print production workflows. Key sessions covered AI in digital printing,
+      imaging, predictive maintenance, information management, print workflow, and print quality control. The workshop
+      brought together academic experts and industry professionals, and the interactive sessions enabled participants
+      to explore how AI-driven tools can support automation, decision-making, and process optimisation in the printing industry.
+    </p>
+  </div>
+</div>
+
     <div>
-          <!-- MEDIA COVERAGE (TOP) -->
+
+                <!-- MEDIA COVERAGE (TOP) -->
     <div class="row" style="margin-bottom: 18px;">
       <div class="col-sm-12 white-block">
         <h3><i class="fa fa-newspaper-o" aria-hidden="true"></i> Media Coverage</h3>
