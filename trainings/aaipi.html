@@ -93,32 +93,94 @@
     justify-content: center;
   }
 }
-    @keyframes pulseGlow {
+.hero-cta {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-hero {
+  padding: 10px 18px;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-info {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+  color: #fff;
+}
+
+.btn-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.16);
+}
+
+@media (max-width: 480px) {
+  .btn-hero {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@keyframes pulseGlow {
   0% { box-shadow: 0 0 0 rgba(255, 215, 0, 0.6); }
-  50% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.9); 
-    .page-hero h1 {
-      margin: 0;
-      font-size: 28px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .page-hero .subtitle {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #e7e7e7;
-    }
-
-    .fee-badges {
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .fee-badge}
+  50% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.9); }
   100% { box-shadow: 0 0 0 rgba(255, 215, 0, 0.6); }
+}
+
+.page-hero {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 22px 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.page-hero h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.page-hero .subtitle {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #e7e7e7;
+}
+
+.fee-badges {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fee-badge {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: inline-block;
+  min-width: 220px;
+}
+
+.fee-badge small {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 2px;
 }
 
 .fee-early {
@@ -127,39 +189,11 @@
   animation: pulseGlow 1.8s infinite;
   transform: scale(1.03);
 }
-    /* Prevent horizontal overflow due to Bootstrap rows */
-    html, body { overflow-x: hidden; }
-  
-    /* Fixed navbar spacing */
-    body { padding-top: 70px; }
 
-    .page-hero {
-      background: linear-gradient(90deg, #1e3c72, #2a5298);
-      color: #fff;
-      padding: 22px 18px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.20);
-      text-align: center;
-      margin-bottom: 18px;
-    }
-     {
-      padding: 10px 14px;
-      border-radius: 6px;
-      font-weight: 700;
-      display: inline-block;
-      min-width: 220px;
-    }
-
-    .fee-badge small {
-      display: block;
-      font-weight: 400;
-      font-size: 13px;
-      margin-top: 2px;
-    }
-
-    .fee-early { background: #ffd700; color: #000; }
-    .fee-late  { background: #ff5252; color: #fff; }
-
+.fee-late {
+  background: #ff5252;
+  color: #fff;
+}
     .section-line-title {
       position: relative;
       text-align: center;
@@ -471,28 +505,31 @@
         Regional Institute of Printing Technology, Kolkata
       </p>
 
-      <div class="hero-cta">
+     <div class="hero-cta">
   <a class="btn btn-hero btn-warning"
      href="../trainings/files/brochure.pdf"
-target="_blank"
+     target="_blank"
+     rel="noopener">
     <i class="fa fa-file-pdf-o"></i>
     Download Brochure
   </a>
 
   <a class="btn btn-hero btn-primary"
      href="https://forms.gle/9Vtwy2m1LLyoLzUc9"
-     target="_blank">
+     target="_blank"
+     rel="noopener">
     <i class="fa fa-edit"></i>
     Register Here
   </a>
-          <a class="btn btn-hero btn-info"
+
+  <a class="btn btn-hero btn-info"
      href="../trainings/files/schedule_aaipi.pdf"
-target="_blank"
+     target="_blank"
+     rel="noopener">
     <i class="fa fa-file-pdf-o"></i>
     Schedule
   </a>
 </div>
-
       <div class="fee-badges">
   <div class="fee-badge fee-early expired">
     🎯 Early Bird Registration: INR 1500/-
