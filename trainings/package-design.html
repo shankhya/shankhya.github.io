@@ -80,12 +80,32 @@
       align-items: center;
       gap: 8px;
     }
-
+  
     .btn-hero:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 22px rgba(0,0,0,0.16);
     }
+.session {
+  padding: 10px 12px;
+  border-radius: 5px;
+  margin-top: 8px;
+  font-size: 14px;
+}
 
+.session-lecture {
+  background: #e8f1ff;
+  border-left: 4px solid #2a5298;
+}
+
+.session-hands-on {
+  background: #e9f8ee;
+  border-left: 4px solid #28a745;
+}
+
+.session-label {
+  font-weight: 700;
+  margin-right: 5px;
+}
     .fee-badges {
       margin-top: 18px;
       display: flex;
@@ -725,65 +745,86 @@
       </div>
     </div>
 
-    <!-- INDICATIVE MODULES -->
-    <div class="row">
-      <div class="col-sm-12 white-block">
-        <h3><i class="fa fa-cogs" aria-hidden="true"></i> Indicative Workshop Modules</h3>
+    <!-- PROGRAMME SCHEDULE -->
+<div class="row">
+  <div class="col-sm-12 white-block">
 
-        <p style="color:#555;">
-          The exact day-wise and time-wise schedule can be inserted here once the workshop duration is finalised.
-        </p>
+    <h3>
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      Programme Schedule (4 Days)
+    </h3>
 
-        <div class="module-card">
-          <h4>Module 1 — Packaging Fundamentals and Production Requirements</h4>
-          <p>
-            Functions of packaging, package categories, material considerations, print processes,
-            production constraints and the relationship between structure, graphics and manufacturing.
-          </p>
-        </div>
+    <!-- DAY 1 -->
+    <div class="module-card">
+      <h4>Day 1 – Fundamentals of Package Design and Costing</h4>
 
-        <div class="module-card">
-          <h4>Module 2 — Semi-Rigid Package Design</h4>
-          <p>
-            Structural planning, panels, flaps, folds, glue areas, bleed, safe areas, dielines and
-            preparation of layouts suitable for carton and other semi-rigid package formats.
-          </p>
-        </div>
+      <div class="session session-lecture">
+        <span class="session-label">
+          <i class="fa fa-book" aria-hidden="true"></i> Lecture Session:
+        </span>
+        Introduction to Packaging and Principles of Package Design
+      </div>
 
-        <div class="module-card">
-          <h4>Module 3 — Flexible Package Design</h4>
-          <p>
-            Artwork planning for flexible packaging, repeat and seam considerations, orientation,
-            trapping and production-related constraints associated with flexible package formats.
-          </p>
-        </div>
-
-        <div class="module-card">
-          <h4>Module 4 — Package Cost Estimation</h4>
-          <p>
-            Practical estimation of material consumption, print-production variables, finishing
-            requirements, wastage and other major cost components affecting package production.
-          </p>
-        </div>
-
-        <div class="module-card">
-          <h4>Module 5 — Prepress, Colour and Print-Ready Artwork</h4>
-          <p>
-            Image and graphic preparation, colour considerations, fonts, linked assets, overprint,
-            bleed, trapping, separations, PDF preparation and checks required before releasing artwork for print.
-          </p>
-        </div>
-
-        <div class="module-card">
-          <h4>Module 6 — Hands-on Prototyping Exercise</h4>
-          <p>
-            Participants develop a package concept, prepare the production layout, place artwork,
-            generate a print-ready file and create or evaluate a physical prototype/mock-up.
-          </p>
-        </div>
+      <div class="session session-lecture">
+        <span class="session-label">
+          <i class="fa fa-calculator" aria-hidden="true"></i> Lecture Session:
+        </span>
+        Estimation of Costing in Package Design
       </div>
     </div>
 
+    <!-- DAY 2 -->
+    <div class="module-card">
+      <h4>Day 2 – Semi-Rigid Package Design</h4>
+
+      <div class="session session-hands-on">
+        <span class="session-label">
+          <i class="fa fa-laptop" aria-hidden="true"></i> Hands-on Session:
+        </span>
+        Prerequisites for Designing Packages
+      </div>
+
+      <div class="session session-hands-on">
+        <span class="session-label">
+          <i class="fa fa-laptop" aria-hidden="true"></i> Hands-on Session:
+        </span>
+        Semi-Rigid Package Design Using Package Design Software
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="module-card">
+      <h4>Day 3 – Flexible Package Design and Design Production</h4>
+
+      <div class="session session-hands-on">
+        <span class="session-label">
+          <i class="fa fa-laptop" aria-hidden="true"></i> Hands-on Session:
+        </span>
+        Flexible Package Design Using Package Design Software
+      </div>
+
+      <div class="session session-hands-on">
+        <span class="session-label">
+          <i class="fa fa-print" aria-hidden="true"></i> Hands-on Session:
+        </span>
+        Production of Package Designs
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="module-card">
+      <h4>Day 4 – Package Prototyping</h4>
+
+      <div class="session session-hands-on">
+        <span class="session-label">
+          <i class="fa fa-cube" aria-hidden="true"></i> Hands-on Session:
+        </span>
+        Prototyping of Semi-Rigid and Flexible Packages
+      </div>
+    </div>
+
+  </div>
+</div>
     <!-- RESOURCE PERSONS -->
     <div class="section-line-title">
       <span><i class="fa fa-microphone" aria-hidden="true"></i> Resource Persons</span>
