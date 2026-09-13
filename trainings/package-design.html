@@ -365,13 +365,21 @@
     }
 
     .footer {
-      margin-top: 18px;
-      padding: 14px 0;
-      border-top: 1px solid #eee;
-      text-align: center;
-      color: #666;
-      font-size: 13px;
-    }
+  position: static !important;
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  clear: both;
+}
+    .container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
     .placeholder-note {
       color: #777;
