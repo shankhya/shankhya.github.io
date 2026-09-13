@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hands-on Workshop on Semi-Rigid and Flexible Package Design and Prototyping for Print Production</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hands-on Workshop on Semi-Rigid and Flexible Package Design and Prototyping for Print Production">
+  <meta name="keywords" content="Workshop, Package Design, Packaging, Prototyping, Printing Technology, Prepress, RIPT, Print Production">
+  <meta name="author" content="Regional Institute of Printing Technology, Kolkata">
+  <meta name="msvalidate.01" content="DC94E1683197E154758452EFDE4EC02A">
+
+  <link rel="icon" href="../images/icon.png" type="image/x-icon">
+
+  <!-- Bootstrap 3 + jQuery -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/academicons-1.8.0/css/academicons.css">
+
+  <!-- Existing site CSS -->
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <style>
+    .page-hero {
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      color: #fff;
+      padding: 24px 18px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .page-hero h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .page-hero .subtitle {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #e7e7e7;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 5px 11px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.28);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .hero-cta {
+      margin-top: 17px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero {
+      padding: 10px 18px;
+      font-weight: 700;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-hero:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.16);
+    }
+
+    .fee-badges {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .fee-badge {
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      display: inline-block;
+      min-width: 220px;
+    }
+
+    .fee-badge small {
+      display: block;
+      font-weight: 400;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .fee-primary {
+      background: #ffd700;
+      color: #000;
+    }
+
+    .fee-secondary {
+      background: #5bc0de;
+      color: #fff;
+    }
+
+    .section-line-title {
+      position: relative;
+      text-align: center;
+      margin: 22px 0 18px;
+    }
+
+    .section-line-title:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      border-top: 1px solid #ddd;
+      transform: translateY(-50%);
+    }
+
+    .section-line-title span {
+      position: relative;
+      display: inline-block;
+      background: #fff;
+      padding: 0 12px;
+      font-weight: 700;
+      color: #444;
+      font-size: 18px;
+    }
+
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .info-row > [class*="col-"] {
+      float: none;
+    }
+
+    .panel-card {
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 4px;
+      height: 100%;
+    }
+
+    ul.info {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    ul.info li {
+      margin-bottom: 8px;
+    }
+
+    .important-dates {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+      font-size: 0.95em;
+    }
+
+    .date-chip {
+      background-color: #fff3cd;
+      padding: 8px;
+      border-left: 4px solid #ffc107;
+      margin-bottom: 8px;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      display: block;
+      border-radius: 4px;
+      border: 1px solid #eee;
+    }
+
+    .banner-placeholder {
+      width: 100%;
+      min-height: 360px;
+      border-radius: 4px;
+      border: 1px solid #d9d9d9;
+      background:
+        linear-gradient(135deg, rgba(30,60,114,0.94), rgba(42,82,152,0.88)),
+        repeating-linear-gradient(
+          45deg,
+          rgba(255,255,255,0.04),
+          rgba(255,255,255,0.04) 12px,
+          rgba(255,255,255,0.08) 12px,
+          rgba(255,255,255,0.08) 24px
+        );
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+    }
+
+    .banner-placeholder .inner {
+      max-width: 580px;
+    }
+
+    .banner-placeholder i {
+      font-size: 52px;
+      margin-bottom: 15px;
+      color: #ffd700;
+    }
+
+    .banner-placeholder h2 {
+      margin-top: 0;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .white-block {
+      background: #fff;
+      padding: 2%;
+    }
+
+    .no-bullets {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .no-bullets li {
+      margin-bottom: 8px;
+    }
+
+    .module-card {
+      border: 1px solid #eee;
+      border-left: 4px solid #2a5298;
+      border-radius: 4px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      background: #fafafa;
+    }
+
+    .module-card h4 {
+      margin: 0 0 7px;
+      font-weight: 700;
+    }
+
+    .module-card p {
+      margin-bottom: 0;
+      color: #555;
+    }
+
+    .speaker-card {
+      background: #f7f7f7;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .speaker-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #e9e9e9;
+      border: 1px solid #dcdcdc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .speaker-name {
+      margin: 0 0 6px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .speaker-meta {
+      margin: 0 0 6px;
+      color: #333;
+    }
+
+    .speaker-spec {
+      margin: 0;
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    .team-role-card {
+      border: 1px solid #eee;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 14px;
+      background: #fff;
+    }
+
+    .team-role-header {
+      background: #0b2a8f;
+      color: #fff;
+      font-weight: 700;
+      padding: 10px 12px;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    .team-role-body {
+      background: #fff6a8;
+      padding: 14px 12px;
+    }
+
+    .team-person {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .team-person:last-child {
+      border-bottom: none;
+    }
+
+    .team-photo-img {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #dcdcdc;
+      display: block;
+    }
+
+    .team-name {
+      margin: 0 0 4px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .team-meta {
+      margin: 0;
+      color: #222;
+    }
+
+    .team-contact {
+      margin: 6px 0 0;
+      font-size: 0.95em;
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 14px 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .placeholder-note {
+      color: #777;
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    @media (max-width: 767px) {
+      .info-row {
+        display: block;
+      }
+
+      .info-row > [class*="col-"] {
+        float: left;
+      }
+
+      .banner-placeholder {
+        min-height: 260px;
+        margin-top: 12px;
+      }
+
+      .speaker-card .media-left,
+      .speaker-card .media-body {
+        display: block;
+        width: 100%;
+      }
+
+      .speaker-card .media-left {
+        padding-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .btn-hero {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .page-hero h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6NX48XKRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z6NX48XKRL');
+  </script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+          <li><a href="/research.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Research</a></li>
+          <li><a href="/publications.html"><i class="fa fa-book" aria-hidden="true"></i> Publications</a></li>
+          <li><a href="/students.html"><i class="fa fa-users" aria-hidden="true"></i> Students section</a></li>
+          <li><a href="/resources.html"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Resources</a></li>
+          <li><a href="/teaching.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching</a></li>
+          <li><a href="/media.html"><i class="fa fa-television" aria-hidden="true"></i> Media</a></li>
+          <li><a href="/musings.html"><i class="fa fa-grav" aria-hidden="true"></i> Musings</a></li>
+
+          <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-certificate" aria-hidden="true"></i> Trainings <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="/trainings.html"><i class="fa fa-th-list"></i> All Trainings</a></li>
+              <li class="divider"></li>
+              <li class="active">
+                <a href="/trainings/package-design.html">
+                  <i class="fa fa-cube"></i> Workshop: Package Design &amp; Prototyping
+                </a>
+              </li>
+              <li><a href="/trainings/aaipi.html"><i class="fa fa-graduation-cap"></i> Workshop: AAIPI (Apr 2026)</a></li>
+              <li><a href="/trainings/sttp.html"><i class="fa fa-graduation-cap"></i> STTP: QA &amp; Process Control (Jan 2026)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="page-hero">
+      <div class="hero-kicker">Upcoming Hands-on Training Programme</div>
+
+      <h1>
+        Hands-on Workshop on<br>
+        <span style="color:#ffd700;">
+          Semi-Rigid and Flexible Package Design and Prototyping for Print Production
+        </span>
+      </h1>
+
+      <p class="subtitle">
+        Organized by the Department of Printing Technology,<br>
+        Regional Institute of Printing Technology, Kolkata
+      </p>
+
+      <div class="hero-cta">
+        <!-- Replace # with actual brochure URL -->
+        <a class="btn btn-hero btn-warning" href="#" target="_blank" rel="noopener">
+          <i class="fa fa-file-pdf-o"></i> Download Brochure
+        </a>
+
+        <!-- Replace # with actual registration form URL -->
+        <a class="btn btn-hero btn-primary" href="#" target="_blank" rel="noopener">
+          <i class="fa fa-edit"></i> Register Here
+        </a>
+
+        <!-- Replace # with actual schedule PDF URL -->
+        <a class="btn btn-hero btn-info" href="#" target="_blank" rel="noopener">
+          <i class="fa fa-calendar"></i> Workshop Schedule
+        </a>
+      </div>
+
+      <div class="fee-badges">
+        <div class="fee-badge fee-primary">
+          Registration Fee: ₹[UPDATE]
+          <small>Limited seats • Hands-on participation</small>
+        </div>
+
+        <div class="fee-badge fee-secondary">
+          Workshop Dates: [UPDATE]
+          <small>Venue / Mode: [UPDATE]</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT THE PROGRAM -->
+    <div class="section-line-title">
+      <span><i class="fa fa-info-circle" aria-hidden="true"></i> About the Program</span>
+    </div>
+
+    <!-- QUICK INFO + BANNER -->
+    <div class="row info-row">
+
+      <div class="col-sm-4">
+        <div class="panel-card">
+          <ul class="info">
+            <li>
+              <span class="glyphicon glyphicon-certificate"></span>
+              <b>Hands-on Workshop on Semi-Rigid and Flexible Package Design and Prototyping for Print Production</b>
+            </li>
+
+            <li>
+              <span class="glyphicon glyphicon-education"></span>
+              Organised by Department of Printing Technology, Regional Institute of Printing Technology, Kolkata
+            </li>
+
+            <li>
+              <span class="glyphicon glyphicon-calendar"></span>
+              <b>Date(s):</b> [UPDATE]
+            </li>
+
+            <li>
+              <span class="glyphicon glyphicon-map-marker"></span>
+              <b>Venue / Mode:</b> [UPDATE]
+            </li>
+
+            <li>
+              <span class="glyphicon glyphicon-user"></span>
+              <b>Coordinator:</b> Shankhya Debnath, HoD &amp; Lecturer, Dept. of Printing Technology
+            </li>
+
+            <li>
+              <span class="glyphicon glyphicon-envelope"></span>
+              <a href="mailto:shankhya@wbscte.ac.in" style="color:#000;">shankhya@wbscte.ac.in</a>
+            </li>
+
+            <li>
+              <span class="glyphicon glyphicon-phone-alt"></span> 033-2414-6432 (O)
+            </li>
+          </ul>
+
+          <hr style="width:80%;">
+
+          <ul class="info">
+            <li>
+              <a href="#" target="_blank" rel="noopener">
+                <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Brochure
+              </a>
+              <br>
+
+              <a href="#" target="_blank" rel="noopener">
+                <i class="fa fa-edit" aria-hidden="true"></i> Registration Form
+              </a>
+            </li>
+          </ul>
+
+          <div class="important-dates">
+            <ul class="info">
+              <li>
+                <span class="glyphicon glyphicon-calendar"></span>
+                <b>Important Dates</b>
+              </li>
+
+              <li class="date-chip">
+                <b>Registration period:</b> [UPDATE]
+              </li>
+
+              <li><b>Last date for registration:</b> [UPDATE]</li>
+              <li><b>Intimation to selected participants:</b> [UPDATE]</li>
+              <li><b>Workshop date(s):</b> [UPDATE]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-8" style="padding-left:0;">
+        <!--
+          OPTION 1: Replace this placeholder with an actual banner:
+          <img class="img-responsive banner-img"
+               src="../images/package-design-workshop-banner.jpg"
+               alt="Package Design and Prototyping Workshop Banner">
+        -->
+
+        <div class="banner-placeholder">
+          <div class="inner">
+            <i class="fa fa-cube" aria-hidden="true"></i>
+            <h2>Semi-Rigid &amp; Flexible Package Design</h2>
+            <p style="font-size:17px; margin-bottom:6px;">
+              From concept and costing to print-ready artwork and physical prototype
+            </p>
+            <p style="font-size:14px; color:#e8e8e8;">
+              Replace this block with the final workshop banner image when available.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ABOUT + THRUST AREAS -->
+    <div class="row">
+      <div class="col-sm-9 white-block">
+        <h3><i class="fa fa-info-circle" aria-hidden="true"></i> About the Workshop</h3>
+
+        <p style="text-align: justify;">
+          This hands-on workshop is designed to provide participants with practical exposure to the
+          complete workflow of package design and prototyping for print production. The programme
+          focuses on both <b>semi-rigid</b> and <b>flexible packaging</b>, taking participants from the
+          initial understanding of package structure and production requirements through design
+          development, costing estimation, prepress preparation, colour considerations and the
+          creation of print-ready artwork.
+        </p>
+
+        <p style="text-align: justify;">
+          Emphasis will be placed on learning by doing. Participants will work through practical
+          exercises involving package layout, structural considerations, dielines, artwork placement,
+          production constraints and prototype preparation. The workshop will also address how design
+          choices influence material use, manufacturing feasibility, print quality and overall package cost.
+        </p>
+
+        <p style="text-align: justify; margin-bottom:0;">
+          By connecting design decisions with actual print-production requirements, the programme aims
+          to help participants develop packaging concepts that are visually effective, technically
+          feasible and suitable for efficient production.
+        </p>
+      </div>
+
+      <div class="col-sm-3 white-block">
+        <h3><i class="fa fa-bullseye" aria-hidden="true"></i> Thrust Areas</h3>
+
+        <ul class="no-bullets">
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Semi-rigid package design</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Flexible packaging design</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Structural layout &amp; dielines</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Package prototyping</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Package costing estimation</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Prepress requirements</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Colour for packaging</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Print-ready artwork preparation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- OBJECTIVES + TARGET -->
+    <div class="row">
+      <div class="col-sm-6 white-block">
+        <h3><i class="fa fa-flag" aria-hidden="true"></i> Objectives</h3>
+
+        <ul class="no-bullets">
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Introduce the functional and production requirements of semi-rigid and flexible packages.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Develop practical skills in creating package layouts, dielines and production-oriented designs.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Demonstrate methods for preparing physical or mock-up prototypes of package concepts.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Explain the basic principles used in estimating package production cost.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Build understanding of prepress, colour and artwork requirements for package printing.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Enable participants to prepare technically correct print-ready package artwork.</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-6 white-block">
+        <h3><i class="fa fa-users" aria-hidden="true"></i> Target Participants</h3>
+
+        <ul class="no-bullets">
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Students of Printing, Packaging, Graphic Design and allied disciplines</li>
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Faculty members and instructors in Printing / Graphic / Media Technology</li>
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Packaging and print-production professionals</li>
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Prepress operators and graphic designers working with packaging artwork</li>
+          <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Entrepreneurs and professionals seeking practical exposure to package development</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- INDICATIVE MODULES -->
+    <div class="row">
+      <div class="col-sm-12 white-block">
+        <h3><i class="fa fa-cogs" aria-hidden="true"></i> Indicative Workshop Modules</h3>
+
+        <p style="color:#555;">
+          The exact day-wise and time-wise schedule can be inserted here once the workshop duration is finalised.
+        </p>
+
+        <div class="module-card">
+          <h4>Module 1 — Packaging Fundamentals and Production Requirements</h4>
+          <p>
+            Functions of packaging, package categories, material considerations, print processes,
+            production constraints and the relationship between structure, graphics and manufacturing.
+          </p>
+        </div>
+
+        <div class="module-card">
+          <h4>Module 2 — Semi-Rigid Package Design</h4>
+          <p>
+            Structural planning, panels, flaps, folds, glue areas, bleed, safe areas, dielines and
+            preparation of layouts suitable for carton and other semi-rigid package formats.
+          </p>
+        </div>
+
+        <div class="module-card">
+          <h4>Module 3 — Flexible Package Design</h4>
+          <p>
+            Artwork planning for flexible packaging, repeat and seam considerations, orientation,
+            trapping and production-related constraints associated with flexible package formats.
+          </p>
+        </div>
+
+        <div class="module-card">
+          <h4>Module 4 — Package Cost Estimation</h4>
+          <p>
+            Practical estimation of material consumption, print-production variables, finishing
+            requirements, wastage and other major cost components affecting package production.
+          </p>
+        </div>
+
+        <div class="module-card">
+          <h4>Module 5 — Prepress, Colour and Print-Ready Artwork</h4>
+          <p>
+            Image and graphic preparation, colour considerations, fonts, linked assets, overprint,
+            bleed, trapping, separations, PDF preparation and checks required before releasing artwork for print.
+          </p>
+        </div>
+
+        <div class="module-card">
+          <h4>Module 6 — Hands-on Prototyping Exercise</h4>
+          <p>
+            Participants develop a package concept, prepare the production layout, place artwork,
+            generate a print-ready file and create or evaluate a physical prototype/mock-up.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESOURCE PERSONS -->
+    <div class="section-line-title">
+      <span><i class="fa fa-microphone" aria-hidden="true"></i> Resource Persons</span>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 white-block">
+
+        <!-- Duplicate this card for each confirmed resource person -->
+        <div class="speaker-card media">
+          <div class="media-left">
+            <div class="speaker-photo">Photo</div>
+          </div>
+
+          <div class="media-body">
+            <h4 class="speaker-name">[RESOURCE PERSON NAME]</h4>
+            <p class="speaker-meta">[Designation / Organisation]</p>
+            <p class="speaker-spec"><b>Session:</b> [Area / Topic]</p>
+          </div>
+        </div>
+
+        <p class="placeholder-note">
+          Add confirmed resource persons here. Duplicate the card above for additional speakers/trainers.
+        </p>
+      </div>
+    </div>
+
+    <!-- OUTCOMES + REGISTRATION -->
+    <div class="row">
+      <div class="col-sm-6 white-block">
+        <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> Outcomes for Participants</h3>
+
+        <ul class="no-bullets">
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Understand the production requirements of semi-rigid and flexible packaging.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Create basic structural layouts and dielines for package design.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Develop packaging artwork while accounting for print and converting constraints.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Prepare and evaluate package prototypes or mock-ups.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Estimate major material and production cost components of a package.</li>
+          <li><i class="fa fa-check-circle" aria-hidden="true"></i> Prepare technically correct, colour-conscious and print-ready package artwork.</li>
+        </ul>
+      </div>
+
+      <div class="col-sm-6 white-block">
+        <h3><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Modality &amp; Registration</h3>
+
+        <p style="text-align: justify;">
+          The workshop will be conducted as a <b>hands-on practical training programme</b>.
+          Participation may be limited to ensure adequate practical interaction and individual guidance.
+          Registration will be accepted subject to seat availability and confirmation by the organising department.
+        </p>
+
+        <ul class="no-bullets">
+          <li><b>Workshop date(s):</b> [UPDATE]</li>
+          <li><b>Venue / Mode:</b> [UPDATE]</li>
+          <li><b>Registration fee:</b> ₹[UPDATE]</li>
+          <li><b>Last date of registration:</b> [UPDATE]</li>
+          <li><b>Registration link:</b> <a href="#" target="_blank" rel="noopener">[UPDATE LINK]</a></li>
+        </ul>
+
+        <p style="text-align: justify; margin-bottom:0;">
+          Detailed instructions regarding payment, required software/materials and participation
+          will be communicated to confirmed participants.
+        </p>
+      </div>
+    </div>
+
+    <!-- PATRONS & COMMITTEE -->
+    <div class="section-line-title">
+      <span><i class="fa fa-sitemap" aria-hidden="true"></i> Patrons &amp; Organizing Committee</span>
+    </div>
+
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="team-role-card">
+          <div class="team-role-header">Chief Patron</div>
+
+          <div class="team-role-body">
+            <div class="team-person media">
+              <div class="media-left">
+                <img class="team-photo-img" src="files/jb.png" alt="Shri Jayanta Banerjee">
+              </div>
+
+              <div class="media-body">
+                <p class="team-name">Shri Jayanta Banerjee</p>
+                <p class="team-meta">Director of Technical Education &amp; Training, Government of West Bengal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="team-role-card">
+          <div class="team-role-header">Patron</div>
+
+          <div class="team-role-body">
+            <div class="team-person media">
+              <div class="media-left">
+                <img class="team-photo-img" src="files/hm.png" alt="Shri Haroprosad Mondal">
+              </div>
+
+              <div class="media-body">
+                <p class="team-name">Shri Haroprosad Mondal</p>
+                <p class="team-meta">Principal-in-Charge, Regional Institute of Printing Technology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="team-role-card">
+          <div class="team-role-header">Coordinator</div>
+
+          <div class="team-role-body">
+            <div class="team-person media">
+              <div class="media-left">
+                <img class="team-photo-img" src="files/sd.png" alt="Shri Shankhya Debnath">
+              </div>
+
+              <div class="media-body">
+                <p class="team-name">Shri Shankhya Debnath</p>
+                <p class="team-meta">
+                  HoD &amp; Lecturer, Department of Printing Technology,
+                  Regional Institute of Printing Technology
+                </p>
+
+                <p class="team-contact">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <a href="mailto:shankhya@wbscte.ac.in">shankhya@wbscte.ac.in</a><br>
+                  <i class="fa fa-phone" aria-hidden="true"></i> [UPDATE MOBILE IF REQUIRED]
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="team-role-card">
+          <div class="team-role-header">Organizing Committee</div>
+
+          <div class="team-role-body">
+            <div class="team-person">
+              <p class="team-name">[MEMBER 1]</p>
+              <p class="team-meta">[Designation]</p>
+            </div>
+
+            <div class="team-person">
+              <p class="team-name">[MEMBER 2]</p>
+              <p class="team-meta">[Designation]</p>
+            </div>
+
+            <div class="team-person">
+              <p class="team-name">[MEMBER 3]</p>
+              <p class="team-meta">[Designation]</p>
+            </div>
+
+            <p class="placeholder-note" style="margin-top:10px; margin-bottom:0;">
+              Replace these entries with the final organising committee.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Last updated: <script>document.write(new Date(document.lastModified).toLocaleDateString());</script></p>
+    <p>All rights reserved. Shankhya Debnath. 2026.</p>
+  </div>
+
+</body>
+</html>
